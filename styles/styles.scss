@@ -87,6 +87,7 @@ span {
 
 .nothundo{
 	margin: 8vh auto !important;
+	padding: 24px 0;
 	width: 78%;
 	overflow: hidden;
 	text-align: center;
@@ -352,7 +353,7 @@ footer {
 		right: 0;
 		bottom: 120px;
 	.soc-group {
-		margin-bottom: 64px;
+		margin-bottom: 48px;
 	}
 
 		.soc-row a {
@@ -476,8 +477,9 @@ footer {
 		margin-top: 3vh !important;
 
 		.twit-tags {
-			display: inline-block;
-			margin-top: 12px;
+			max-width: 800px;
+			@include flexme(center, space-evenly);
+			margin: 12px auto 0 auto;
 			span {
 				padding: 4px 12px;
 				border: 1px solid $fontGreen;
@@ -488,14 +490,17 @@ footer {
 			float: right;
 			border: 1px solid $fontGreen;
 			background: transparent;
-			padding: 4px 12px;
+			padding: 6px 18px;
 			&::placeholder {
 				color: $fontGreen;
 				opacity: 1;
 			}
 		}
 		p {
-			padding: 0 240px;
+			margin: 0 auto;
+			padding: 0 24px;
+			line-height: 32px;
+			max-width: 800px;
 		}
 	}
 }
@@ -548,15 +553,146 @@ footer {
 		text-align: left;
 		width: 390px;
 		h3 {
-			margin-top: 26px;
+			margin: 26px 0 0 0;
 		}
 		a {
 			color: $fontBlack;
 		}
 	}
 
-	.but {
+	.sep {
+		margin-top: 72px;
+	}
+
+	.sep a {
 		@include thebutton($fontGreen);
+		width: 240px;
+		margin: 0 auto;
+	}
+}
+
+#hostnotes {
+	.hosts-cont {
+		@include flexme(flex-start, space-evenly );
+		width: 800px;
+		margin: 64px auto 72px;
+	}
+
+	.host-info-cont {
+		text-align: left;
+		width: 450px;
+		p {
+			margin-bottom: 24px;
+		}
+	}
+
+	a {
+		@include thebutton($fontGreen);
+		width: 240px;
+		margin: 0 auto;
+	}
+}
+
+#reviews {
+	.feat-row {
+		@include flexme(flex-start, space-evenly);
+		max-width: 900px;
+		margin: 0 auto 10vh auto;
+
+		img {
+			width: 14%;
+		}
+	}
+
+	.reviewee-cont {
+		text-align: left;
+		max-width: 640px;
+
+		h3 {
+			margin: 0 0 8px 0;
+		}
+		img {
+			margin: 0 0 24px 0;
+		}
+	}
+}
+
+#guestphotos {
+	h1 {
+		padding: 48px 0 24px;
+	}
+}
+
+#notesterms {
+	.nt-row {
+		@include flexme(center, center);
+	}
+	
+	.ball {
+		border-left: 1px solid $fontGreen;
+		border-top: 1px solid $fontGreen;
+		border-right: 1px solid $fontGreen;
+	}
+
+	.rd {
+		border-right: 1px solid $fontGreen;
+		border-bottom:  1px solid $fontGreen;
+	}
+
+	.ld{
+		border-left: 1px solid $fontGreen;
+		border-bottom:  1px solid $fontGreen;
+	}
+
+	.bm {
+		border-right: 1px solid $fontGreen;
+	}
+
+	.nt-col {
+		width: 240px;
+		height: 240px;
+		padding: 24px;
+		img {
+			margin-top: 72px;
+			width: 25%;
+		}
+	}
+
+	.nt-col-l {
+		width:  480px;
+		height : 240px;
+		img {
+			margin-top: 78px;
+			width: 25%;
+		}
+	}
+}
+
+#suggestions {
+	.sugg-cont {
+		@include flexme(flex-start, space-between);
+	}
+
+	.sugg-col {
+		width: 480px;
+	}
+
+	.sugginfo {
+		display: flex;
+		align-items: center;
+		text-align: left;
+		padding: 12px 0;
+	}
+
+	.sugginfo img{
+		width: 53px;
+		height: 72px;
+	}
+	.suggtext { 
+		padding: 0 12px;
+		h3 {
+			max-width: none;
+		}
 	}
 }
 

@@ -89,6 +89,7 @@ span {
 
 .nothundo {
   margin: 8vh auto !important;
+  padding: 24px 0;
   width: 78%;
   overflow: hidden;
   text-align: center;
@@ -432,7 +433,7 @@ footer .rightitems {
 }
 
 footer .rightitems .soc-group {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 footer .rightitems .soc-row a {
@@ -591,8 +592,17 @@ footer .flexme {
 }
 
 .expe-head .bot-sum .twit-tags {
-  display: inline-block;
-  margin-top: 12px;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 12px auto 0 auto;
 }
 
 .expe-head .bot-sum .twit-tags span {
@@ -605,7 +615,7 @@ footer .flexme {
   float: right;
   border: 1px solid #3e695d;
   background: transparent;
-  padding: 4px 12px;
+  padding: 6px 18px;
 }
 
 .expe-head .bot-sum input::-webkit-input-placeholder {
@@ -629,7 +639,10 @@ footer .flexme {
 }
 
 .expe-head .bot-sum p {
-  padding: 0 240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  line-height: 32px;
+  max-width: 800px;
 }
 
 #inclusions .tictacimg {
@@ -699,18 +712,184 @@ footer .flexme {
 }
 
 #itinerary .text-cont h3 {
-  margin-top: 26px;
+  margin: 26px 0 0 0;
 }
 
 #itinerary .text-cont a {
   color: #393738;
 }
 
-#itinerary .but {
+#itinerary .sep {
+  margin-top: 72px;
+}
+
+#itinerary .sep a {
   background: transparent;
   padding: 12px 24px;
   border: 1px solid #3e695d;
   color: #3e695d;
+  width: 240px;
+  margin: 0 auto;
+}
+
+#hostnotes .hosts-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 800px;
+  margin: 64px auto 72px;
+}
+
+#hostnotes .host-info-cont {
+  text-align: left;
+  width: 450px;
+}
+
+#hostnotes .host-info-cont p {
+  margin-bottom: 24px;
+}
+
+#hostnotes a {
+  background: transparent;
+  padding: 12px 24px;
+  border: 1px solid #3e695d;
+  color: #3e695d;
+  width: 240px;
+  margin: 0 auto;
+}
+
+#reviews .feat-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 900px;
+  margin: 0 auto 10vh auto;
+}
+
+#reviews .feat-row img {
+  width: 14%;
+}
+
+#reviews .reviewee-cont {
+  text-align: left;
+  max-width: 640px;
+}
+
+#reviews .reviewee-cont h3 {
+  margin: 0 0 8px 0;
+}
+
+#reviews .reviewee-cont img {
+  margin: 0 0 24px 0;
+}
+
+#guestphotos h1 {
+  padding: 48px 0 24px;
+}
+
+#notesterms .nt-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#notesterms .ball {
+  border-left: 1px solid #3e695d;
+  border-top: 1px solid #3e695d;
+  border-right: 1px solid #3e695d;
+}
+
+#notesterms .rd {
+  border-right: 1px solid #3e695d;
+  border-bottom: 1px solid #3e695d;
+}
+
+#notesterms .ld {
+  border-left: 1px solid #3e695d;
+  border-bottom: 1px solid #3e695d;
+}
+
+#notesterms .bm {
+  border-right: 1px solid #3e695d;
+}
+
+#notesterms .nt-col {
+  width: 240px;
+  height: 240px;
+  padding: 24px;
+}
+
+#notesterms .nt-col img {
+  margin-top: 72px;
+  width: 25%;
+}
+
+#notesterms .nt-col-l {
+  width: 480px;
+  height: 240px;
+}
+
+#notesterms .nt-col-l img {
+  margin-top: 78px;
+  width: 25%;
+}
+
+#suggestions .sugg-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#suggestions .sugg-col {
+  width: 480px;
+}
+
+#suggestions .sugginfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  padding: 12px 0;
+}
+
+#suggestions .sugginfo img {
+  width: 53px;
+  height: 72px;
+}
+
+#suggestions .suggtext {
+  padding: 0 12px;
+}
+
+#suggestions .suggtext h3 {
+  max-width: none;
 }
 
 #inclusions, #suggestions, #inquire, #notesterms, #guestphotos, #reviews, #hostnotes, #itinerary {
