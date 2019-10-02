@@ -139,7 +139,7 @@ span {
 }
 
 .headme {
-  background: #222222;
+  background: url("../images/homepagebg.png");
   background-size: cover;
   padding: 3.5vh 2.5vw 35.5vh 2.5vw;
   display: block;
@@ -148,6 +148,7 @@ span {
 
 .headme img {
   float: left;
+  width: 140px;
 }
 
 .headme h1 {
@@ -239,7 +240,7 @@ span {
 
 #summary .sum-img-cont #long {
   background-size: cover !important;
-  background: url("../images/long1.png") no-repeat;
+  background: url("../images/camp.png") no-repeat;
   width: 240px;
   height: 500px;
   margin-right: 24px;
@@ -248,17 +249,17 @@ span {
 #summary .sum-img-cont #first {
   background-size: cover !important;
   margin-right: 20px;
-  background: url("../images/box1.png") no-repeat;
+  background: url("../images/camel.png") no-repeat;
 }
 
 #summary .sum-img-cont #second {
   background-size: cover !important;
-  background: url("../images/box2.png") no-repeat;
+  background: url("../images/boat.png") no-repeat;
 }
 
 #summary .sum-img-cont #rect {
   background-size: cover !important;
-  background: url("../images/rect.png") no-repeat;
+  background: url("../images/mountainside.png") no-repeat;
   width: 500px;
   height: 240px;
 }
@@ -311,7 +312,7 @@ span {
 }
 
 #destinations img {
-  width: 85%;
+  width: 65%;
 }
 
 #destinations .dest-row {
@@ -339,7 +340,7 @@ span {
 }
 
 #trips .trip-row {
-  margin: 24px 0;
+  margin: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,7 +353,16 @@ span {
 }
 
 #trips .trip-col {
+  position: relative;
   list-style-type: none;
+}
+
+#trips .trip-col h3 {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 43%;
+  left: 40%;
 }
 
 #trips .trip-col img {
@@ -573,7 +583,7 @@ footer .flexme {
   width: 56px;
   height: 72px;
   position: absolute;
-  left: 32px;
+  left: 22px;
   top: -8px;
 }
 
