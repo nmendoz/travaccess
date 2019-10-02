@@ -17,7 +17,7 @@
 /*MIXINS*/
 @mixin  thebutton ($color){
 	background: transparent;
-	padding: 12px 24px;
+	padding: 12px 48px;
 	border: 1px solid $color;
 	color: $color;
 }
@@ -26,6 +26,25 @@
 	display: flex;
 	align-items: $align;
 	justify-content: $just;
+}
+
+@mixin fullHead($bg) {
+	background : url($bg);
+	background-size : cover;
+	padding: 3.5vh 2.5vw 35.5vh 2.5vw;
+	display : block;
+	color : white;
+}
+
+@mixin inputPreset ($color) {
+	text-align: center;
+	color: $color;
+	background-color: transparent;
+	padding: 12px 48px;
+	border: 1px solid $color;
+	&::placeholder {
+		color: $color;
+	}
 }
 
 /*COLORS*/
@@ -79,6 +98,10 @@ span {
 
 
 /*GEN*/
+#inclusions, #suggestions, #inquire, #notesterms,
+ #guestphotos, #reviews, #hostnotes, #itinerary {
+	color: $fontGreen;
+}
 .hundo {
 	text-align: center;
 	overflow: hidden;
@@ -121,17 +144,122 @@ span {
 	padding : 64px 20vw;
 }
 
+.padder {
+	padding-bottom: 10vh;
+}
+
+.soc-vert-fix {
+	position: fixed;
+	top: 40vh;
+	left: 24px;
+	z-index: 99;
+	a {
+		display: block;
+		width: 42px;
+		height: 42px;
+		margin: 12px 0;
+	}
+	
+	.fb {
+		background: url("../images/SocIcons/fb.png");
+		background-size: cover;
+	}
+
+	
+	.tw {
+		background: url("../images/SocIcons/tw.png");
+		background-size: cover;
+	}
+
+	
+	.insta {
+		background: url("../images/SocIcons/insta.png");
+		background-size: cover;
+	}
+
+	
+	.pin {
+		background: url("../images/SocIcons/pin.png");
+		background-size: cover;
+	}
+
+	
+	.mail {
+		background: url("../images/SocIcons/mail.png");
+		background-size: cover;
+	}
+}
+
+.soc-hor-rel {
+	a {
+		display: inline-block;
+		width: 42px;
+		height: 42px;
+		margin: 0px 12px;
+	}
+	
+	.fb {
+		background: url("../images/SocIcons/fb.png");
+		background-size: cover;
+	}
+
+	
+	.tw {
+		background: url("../images/SocIcons/tw.png");
+		background-size: cover;
+	}
+
+	
+	.insta {
+		background: url("../images/SocIcons/insta.png");
+		background-size: cover;
+	}
+
+	
+	.pin {
+		background: url("../images/SocIcons/pin.png");
+		background-size: cover;
+	}
+
+	
+	.mail {
+		background: url("../images/SocIcons/mail.png");
+		background-size: cover;
+	}
+}
+
+.whitenav {
+	@include flexme(center, space-between);
+	img {
+		float: left;
+		width: 140px;
+	}
+	background: white;
+	padding: 24px 2.5vw; 
+	nav {
+		float : right;
+	}
+	ul {
+		display : flex;
+		align-items : flex-start;
+	}
+	li {
+		margin: 0 32px;
+		list-style-type : none;
+	}
+	a {
+		color: #333;
+		text-decoration : none;
+	}
+}
 
 ::placeholder {
 	color: rgba(255,255,255,0.85);
 }
 
+/*INDEX*/
 .headme {
-	background : url("../images/homepagebg.png");
-	background-size : cover;
-	padding: 3.5vh 2.5vw 35.5vh 2.5vw;
-	display : block;
-	color : white;
+	@include fullHead('../images/homepagebg.png');
 	img {
 		float: left;
 		width: 140px;
@@ -179,17 +307,15 @@ span {
 		text-align: center;
 	}
 
-	.sum-text-cont {
-		.sum-row {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-evenly;
-		}
+	.sum-row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-evenly;
+	}
 
-		.sum-info-col {
-			text-align: center;
-			max-width: 280px;
-		}
+	.sum-info-col {
+		text-align: center;
+		max-width: 280px;
 	}
 
 	.sum-img-cont {
@@ -249,6 +375,9 @@ span {
 
 	.tuts-col {
 		max-width: 280px;
+		h3 {
+			padding: 24px;
+		}
 	}
 
 	.btn-links {
@@ -394,7 +523,7 @@ footer {
 	}
 }
 
-/*EXPO*/
+/*EXPEDITION*/
 .expe-head {
 	background-color: $panGreen;
 	color: $fontGreen;
@@ -404,16 +533,20 @@ footer {
 		}
 
 		.abo-cont {
+			padding: 24px 0;
 			color: white;
 			width: 100%;
 			height: 720px;
-			background-color: #333;
+			background: url("../images/expebg.png");
+			background-size: cover;
+			img {
+				width: 64px;
+			}
 		}
 
 		.abo-text {
 			max-width: 520px;
-			margin: 0 auto;
-			padding-top: 36vh;
+			margin: 24vh auto 0;
 			
 			h1 {
 				padding: 24px 0;
@@ -603,6 +736,9 @@ footer {
 }
 
 #reviews {
+	h1 {
+		padding-bottom: 12px;
+	}
 	.feat-row {
 		@include flexme(flex-start, space-evenly);
 		max-width: 900px;
@@ -624,11 +760,38 @@ footer {
 			margin: 0 0 24px 0;
 		}
 	}
+	.rating-num {
+		display: inline-block;
+		font-size: 24px;
+	}
+
+	.star-cont {
+		display: inline-block;
+		margin-bottom: 48px;
+		img {
+			display: inline-block;
+			width: 24px;
+			margin: 0 4px;
+		}
+	}
 }
 
 #guestphotos {
 	h1 {
 		padding: 48px 0 24px;
+	}
+
+	.gp-img-cont {
+		@include flexme(center, center);
+		flex-wrap: wrap;
+		img {
+			width: 360px;
+			margin: 24px;
+		}
+	}
+
+	a {
+		@include thebutton($fontGreen);
 	}
 }
 
@@ -679,16 +842,20 @@ footer {
 
 #suggestions {
 	.sugg-cont {
-		@include flexme(flex-start, space-between);
+		@include flexme(flex-start, center);
 	}
 
 	.sugg-col {
+		margin: 0 24px;
 		width: 480px;
+		img {
+			width : 100%;
+		}
 	}
 
 	.sugginfo {
-		display: flex;
-		align-items: center;
+		position: relative;
+		@include flexme(flex-start, left);
 		text-align: left;
 		padding: 12px 0;
 	}
@@ -702,9 +869,349 @@ footer {
 		h3 {
 			max-width: none;
 		}
+		.rating {
+			position: absolute;
+			right: 12px;
+			bottom: 0;
+		}
 	}
 }
 
-#inclusions, #suggestions, #inquire, #notesterms, #guestphotos, #reviews, #hostnotes, #itinerary {
-	color: $fontGreen;
+#inquire {
+	background: $panGreen;
+	.contain {
+		padding: 98px 0;
+		width: 78%;
+		margin: 0 auto;
+	}
+	.iwlte {
+		span {
+			font-family: $serif;
+			padding: 4px 12px;
+			border: 1px solid $fontGreen;
+		}
+
+		select {
+			font-size: 0.75em;
+			background: transparent;
+			border: 1px solid $fontGreen;
+			color: $fontGreen;
+			padding: 8px 20px;
+			option {
+				background: $panGreen;
+				color: $fontGreen;
+				border-color : $fontGreen;
+			}
+		}
+	}
+
+	h1 {
+		padding-bottom: 12px;
+	}
+	p {
+		margin: 0 auto;
+		max-width: 320px;
+	}
+
+	.submission {
+		margin: 72px auto 32px;
+		text-align: left;
+		max-width: 65%;
+		border: 1px solid $fontGreen;
+		.bme {
+			padding: 12px;
+			border-bottom: 1px solid $fontGreen;
+			span {
+				width: 164px;
+				display: inline-block;
+			}
+			input {
+				
+				background: transparent;
+				color: $fontGreen;
+				display: inline-block;
+				width: 70%;
+			}
+
+		}
+		.bmes {
+			padding: 12px;
+			border-bottom: 1px solid $fontGreen;
+			span {
+				width: 164px;
+				display: inline-block;
+			} input {
+				
+				background: transparent;
+				color: $fontGreen;
+				display: inline-block;
+				width: 70%;
+			}
+		}
+		.bn {
+			@include flexme(flex-start, flex-start );
+			padding: 12px;
+			span {
+				width: 164px;
+				display: inline-block;
+			}
+			textarea{
+				background: transparent;
+				color: $fontGreen;
+				width: 80%;
+			}
+		}
+	}
+
+	button {
+		@include thebutton($fontGreen);
+	}
+}
+
+/*STARS*/
+.stars {
+	width: 16px !important;
+	height: auto !important;
+	margin: 0 12px;
+}
+
+/*ABOUT*/
+.abt-hdr {
+	@include fullHead('../images/homepagebg.png');
+	text-align: left;
+	img {
+		float: left;
+		width: 140px;
+	}
+
+	.text-cont {
+		padding: 0 8vw;
+		h1 {
+			margin-top: 25vh;
+			font-size: 3em;
+			line-height: 1.75em;
+			max-width: 400px;
+		}
+		p{
+			max-width: 800px;
+			font-size: 1.5em;
+			line-height: 1.75em;
+		}
+	}
+	nav {
+		float : right;
+	}
+	ul {
+		display : flex;
+		align-items : flex-start;
+	}
+	li {
+		margin: 0 32px;
+		list-style-type : none;
+	}
+	a {
+		color: white;
+		text-decoration : none;
+	}
+	
+}
+
+.how-its {
+	max-width: 55%;
+	margin: 0 auto;
+	h1,h2,h3,h4,h5,h6 {
+		color: $fontReds;
+	}
+	p {
+		color: $fontGreen;
+	}
+	.sum-text-cont, .img-cont {
+		display: block;
+	}
+	.anotha1 {
+		text-align: center;
+	}
+
+	.sum-row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-evenly;
+		margin: 64px 0;
+	}
+
+	.sum-info-col {
+		text-align: center;
+		max-width: 280px;
+	}
+}
+
+.mt-n-grt {
+	.row {
+		@include flexme(center, center);
+		img {
+			width : 320px;
+		}
+		.text-cont{
+			margin-left: 48px;
+			max-width: 480px;
+			text-align: left;
+			h1 {
+				padding: 12px 0;
+			}
+		}
+		.col {
+			margin: 0 24px;
+			h2{
+				color: $fontGreen;
+			}
+		}
+	}
+
+}
+
+.abt-ftr {
+	background-color: $panGreen;
+	.cont {
+		padding: 24px 0;
+		width: 78%;
+		margin: 0 auto;
+	}
+	.rightitems {
+		right: 120px;
+	}
+}
+
+/*ARTICLES*/
+.arts-page {
+	.contain {
+		height: 720px;
+		@include flexme(flex-start, center);
+	}
+	.left-cont {
+		background: url("../images/homepagebg.png");
+		background-size: cover;
+		color: white;
+		height: 100%;
+		width: 100%;
+	}
+	.right-cont {
+		padding-top: 10%;
+		background: $panLGreen;
+		height: 100%;
+		width: 45%;
+		#trending-tab {
+			display: block;
+		}
+		#popular-tab{
+			display: none;
+		}
+
+		.hdr-click {
+			padding: 12px 0;
+		}
+		li.active {
+			background: $panYell;
+			border-right: 18px solid $fontReds;
+		}
+		li {
+			transition-duration: 0.2s;
+			padding: 24px 0;
+			list-style-type: none;
+			@include flexme(flex-start,  center);
+			span {
+				margin: 0 24px;
+			}
+			h2 {
+				font-size:2.25em;
+				max-width: 320px;
+			}
+		}
+		.tabs {
+			text-align: center;
+			max-width: 260px;
+			margin: 0 auto;
+			margin-bottom: 24px;
+			span {
+				padding: 8px 12px;
+				margin: 0 4px;
+			}
+			.active-tab {
+				color: white;
+				background: $fontReds;
+			}
+		}
+	}
+
+	#fst-cont {
+		padding-top: 24%;
+		max-width: 65%;
+		margin: 0 auto;
+		display: block;
+	}
+	#sec-cont{
+		padding-top: 24%;
+		max-width: 65%;
+		margin: 0 auto;
+		display: none;
+	}
+
+	#thr-cont {
+		padding-top: 24%;
+		max-width: 65%;
+		margin: 0 auto;
+		display: none;
+	}
+	.tab-enabled {
+		display: block;
+	}
+}
+
+
+/*ARTICLE SINGLE*/
+.art-hdr {
+
+	.full-cont {
+		min-height: 768px;
+		background: url("../images/expebg.png");
+		background-size: cover;
+		padding: 0 8vw;
+
+		.text-cont {
+			color: white;
+			padding: 25vh 0;
+
+			p {
+				max-width: 720px;
+			}
+		}
+	}
+}
+
+.page-article {
+	padding: 5vh 12vw;
+	text-align: left;
+	li {
+		padding: 24px 0 18px;
+		font-size: 48px;
+		list-style-type:decimal;
+	}
+}
+
+.sm-news {
+	form {
+		input {
+			padding: 24px 0;
+			@include inputPreset($fontGreen);
+			margin: 0 24px;
+		}
+
+		button{
+			@include thebutton($fontGreen);
+			background: $fontGreen;
+			color: white;
+			margin: 0 auto;
+			margin-top: 24px;
+			display: block;
+		}
+	}
 }
