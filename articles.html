@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Articles</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick-theme.css">
 </head>
 <body>
     <header class="arts-page hundp">
@@ -23,55 +25,113 @@
         </div>
         <div class="contain">
             <div class="left-cont">
-                <div id="fst-cont" class="active-cont">
-                    <h1>First Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
-                            Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
-                            Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+                <div class="trend-cont">
+                    <div id="fst-cont" class="active-cont hdr-cont">
+                        <h1>First t Content</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
+                                Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
+                                Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+                    </div>
+                    <div class="hdr-cont">
+                        <h1>Second t Content</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
+                                Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
+                                Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+                    </div>
+                    <div class="hdr-cont">
+                        <h1>Third t Content</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
+                                Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
+                                Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+                    </div>
                 </div>
-                <div id="sec-cont">
-                    <h1>Second Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
-                            Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
-                            Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+
+                <div class="pop-cont">
+                    <div class="active-cont hdr-cont">
+                        <h1>First p Content</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
+                                Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
+                                Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+                    </div>
+                    <div class="hdr-cont">
+                        <h1>Second p Content</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
+                                Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
+                                Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+                    </div>
+                    <div class="hdr-cont">
+                        <h1>Third p Content</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
+                                Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
+                                Aliquam fringilla convallis maximus. Vestibulum placerat</p>
+                    </div>
                 </div>
-                <div id="thr-cont">
-                    <h1>Third Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisl diam. 
-                            Quisque fermentum arcu vitae metus consequat vehicula. Suspendisse sed molestie lectus. 
-                            Aliquam fringilla convallis maximus. Vestibulum placerat</p>
-                </div>
+                
             </div>
             
             <div class="right-cont">
                 <div class="tabs">
-                    <span id="trend" class="active-tab">Trending</span>
-                    <span id="popular">Popular</span>
+                    <span class="active-tab trend-select">Trending</span>
+                    <span class="pop-select">Popular</span>
                 </div>
                 <ul id="trending-tab" class="tab-enabled">
-                    <li id="fst-sel" class="active"><span>01</span><h2>Where to travel in 2019</h2></li>
-                    <li id="sec-sel"><span>02</span><h2>Where to travel in 2019</h2></li>
-                    <li id="thr-sel"><span>03</span><h2>Where to travel in 2019</h2></li>
+                    <li class="active"><span>01</span><h2>1st trending content</h2></li>
+                    <li ><span>02</span><h2>2nd trending content</h2></li>
+                    <li ><span>03</span><h2>3rd trending content</h2></li>
                 </ul>
                 <ul id="popular-tab">
-                    <li><span>01</span><h2>Where to travel in 2019</h2></li>
-                    <li><span>02</span><h2>Where to travel in 2019</h2></li>
-                    <li><span>03</span><h2>Where to travel in 2019</h2></li>
+                    <li class="active"><span>01</span><h2>1st popular content</h2></li>
+                    <li ><span>02</span><h2>2nd popular content</h2></li>
+                    <li ><span>03</span><h2>3rd popular content</h2></li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <section class="trip-guides">
-
+    <section class="trip-guides nothundo whitered">
+        <h1>Trip Guides</h1>
+        <div class="container">
+            <div class="slider center">
+                <div class="clip">
+                    <img src="images/Italy.png" alt="slide-content">
+                    <h3><div>Italy</div></h3>
+                </div>
+                <div class="clip">
+                    <img src="images/Italy.png" alt="slide-content">
+                    <h3><div>Japan</div></h3>
+                </div>
+                <div class="clip">
+                    <img src="images/Italy.png" alt="slide-content">
+                    <h3><div>Iceland</div></h3>
+                </div>
+                <div class="clip">
+                    <img src="images/Italy.png" alt="slide-content">
+                    <h3><div>Peru</div></h3>
+                </div>
+                <div class="clip">
+                    <img src="images/Italy.png" alt="slide-content">
+                    <h3><div>Finland</div></h3>
+                </div>
+                <div class="clip">
+                    <img src="images/Italy.png" alt="slide-content">
+                    <h3><div>Finland</div></h3>
+                </div>
+                
+            </div>
+        </div>
     </section>
 
-    <section class="stories">
-
+    <section class="stories hundo whitered">
+        <h1>Stories</h1>
     </section>
 
-    <section class="sty-updtd">
-
+    <section class="sm-news nothundo whitered">
+        <h1>Stay updated on our adventures</h1>
+        <form action="POST">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <button>Subscribe</button>
+        </form>
     </section>
 
     <footer class="abt-ftr hundo" style="text-align: left;">
@@ -122,6 +182,7 @@
 	</footer>
     <!-- SCRIPTS -->
     <script src="js/jquery/jquery-3.4.1.min.js"></script>
+    <script src="plugins/slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

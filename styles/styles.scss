@@ -31,7 +31,8 @@
 @mixin fullHead($bg) {
 	background : url($bg);
 	background-size : cover;
-	padding: 3.5vh 2.5vw 35.5vh 2.5vw;
+	padding: 0 2.5vw 35.5vh 2.5vw;
+	height: 85vh;
 	display : block;
 	color : white;
 }
@@ -249,6 +250,30 @@ span {
 	}
 	a {
 		color: #333;
+		text-decoration : none;
+	}
+}
+.transpnav{
+	@include flexme(center, space-between);
+	img {
+		float: left;
+		width: 140px;
+	}
+	background-color: transparent;
+	padding: 24px 2.5vw; 
+	nav {
+		float : right;
+	}
+	ul {
+		display : flex;
+		align-items : flex-start;
+	}
+	li {
+		margin: 0 32px;
+		list-style-type : none;
+	}
+	a {
+		color: white;
 		text-decoration : none;
 	}
 }
@@ -1095,7 +1120,7 @@ footer {
 		width: 100%;
 	}
 	.right-cont {
-		padding-top: 10%;
+		padding-top: 6%;
 		background: $panLGreen;
 		height: 100%;
 		width: 45%;
@@ -1114,6 +1139,7 @@ footer {
 			border-right: 18px solid $fontReds;
 		}
 		li {
+			position: relative;
 			transition-duration: 0.2s;
 			padding: 24px 0;
 			list-style-type: none;
@@ -1122,6 +1148,7 @@ footer {
 				margin: 0 24px;
 			}
 			h2 {
+				float: left;
 				font-size:2.25em;
 				max-width: 320px;
 			}
@@ -1142,27 +1169,45 @@ footer {
 		}
 	}
 
-	#fst-cont {
-		padding-top: 24%;
-		max-width: 65%;
-		margin: 0 auto;
-		display: block;
-	}
-	#sec-cont{
-		padding-top: 24%;
-		max-width: 65%;
-		margin: 0 auto;
-		display: none;
-	}
+	
 
-	#thr-cont {
+	.pop-cont {
+		display: none;
+	}
+	.hdr-cont{
 		padding-top: 24%;
 		max-width: 65%;
 		margin: 0 auto;
 		display: none;
 	}
-	.tab-enabled {
-		display: block;
+}
+.trip-guides {
+	.trip-centered-slider {
+		@include flexme(center, space-between);
+	}
+	.container {
+			background: none;
+			position: relative;
+		h3{
+			color: $fontBlack;
+			line-height:100px;
+			margin:10px;
+			padding:2%;
+			position:relative;
+			text-align:center;
+		}
+		.clip {
+			margin: 0 24px;
+			width: 240px;
+		  	overflow: hidden;
+		  	bottom: 0;
+			img {
+				width: 100%;
+			}
+			h3 {
+				margin: 0 auto;
+			}
+		}
 	}
 }
 
@@ -1171,17 +1216,32 @@ footer {
 .art-hdr {
 
 	.full-cont {
+		position: relative;
 		min-height: 768px;
 		background: url("../images/expebg.png");
 		background-size: cover;
-		padding: 0 8vw;
+		padding: 0 10vw;
 
 		.text-cont {
+			position: absolute;
+			bottom: 18%;
 			color: white;
-			padding: 25vh 0;
+			padding-right: 24px;
 
 			p {
 				max-width: 720px;
+			}
+		}
+		.art-info {
+			@include flexme(center, flex-start);
+			padding: 12px 0;
+			span {
+				text-transform: uppercase;
+			}
+			hr {
+				height: 21px;
+				border-left: 1px solid white;
+				margin: 0 24px;
 			}
 		}
 	}
@@ -1191,13 +1251,58 @@ footer {
 	padding: 5vh 12vw;
 	text-align: left;
 	li {
-		padding: 24px 0 18px;
+		font-family: $sans;
+		padding: 24px 18px;
 		font-size: 48px;
 		list-style-type:decimal;
+	}
+	strong {
+		font-size: 1.5em;
+	}
+	p {
+		padding: 16px 0;
+	}
+	.article-post {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.recommend {
+	h2, h3 {
+		font-family: $sans;
+	}
+	h2 {
+		padding: 24px 0 24px 48px;
+	}
+	.row {
+		@include flexme(flex-start, space-evenly);
+	}
+	.col {
+		width: 45%;
+		img {
+			display: block;
+			max-width: 100%;
+		}
+		span {
+			display: block;
+			width: 120px;
+			padding: 4px 12px;
+			text-transform: uppercase;
+			margin: 12px 0;
+			border: 2px solid $fontBlack;
+		}
+		h3 {
+			margin: 0;
+		}
 	}
 }
 
 .sm-news {
+	h1 {
+		color: $fontGreen;
+	}
 	form {
 		input {
 			padding: 24px 0;
@@ -1214,4 +1319,163 @@ footer {
 			display: block;
 		}
 	}
+}
+
+/*REVIEWS*/
+.rev-hdr {
+	@include fullHead('../images/homepagebg.png');
+	text-align: left;
+	position: relative;
+	img {
+		float: left;
+		width: 140px;
+	}
+
+	.text-cont {
+		position: absolute;
+		bottom: 15vh;
+		padding: 0 8vw;
+		h1 {
+			font-size: 3em;
+			line-height: 1.75em;
+			max-width: 640px;
+		}
+	}
+}
+
+.feat-revs {
+	div {
+		margin: 0 0 15vh;
+		width: 100%;
+		display: block;
+		@include flexme(flex-start, space-evenly);
+		img {
+			max-width: 40%;
+		}
+		.text-cont {
+			text-align: left;
+			display: block;
+			width: 640px;
+
+			span {
+				font-weight: bold;
+				text-transform: uppercase;
+				border: 1px solid $fontGreen;
+				padding: 8px 12px;
+			}
+			p {
+				line-height:42px;
+			}
+		}
+	}
+}
+
+.expe-revs {
+	.contain {
+		@include flexme(flex-start, center);
+		img {
+			max-width: 45%;
+		}
+	}
+
+	.right-cont a{
+		@include thebutton($fontGreen);
+		padding: 12px 92px;
+		color: $fontGreen;
+	}
+	
+	h2, h3 {
+		color: $fontGreen ;
+	}
+
+	.feat-row {
+		@include flexme(flex-start, space-evenly);
+		max-width: 900px;
+		margin: 0 auto 10vh auto;
+
+		img {
+			width: 14%;
+		}
+
+	}
+
+	.reviewee-cont {
+		text-align: left;
+		max-width: 640px;
+
+		h3 {
+			margin: 0 0 8px 0;
+		}
+		img {
+			margin: 0 0 24px 0;
+		}
+	}
+	.rating-num {
+		display: inline-block;
+		font-size: 24px;
+	}
+
+	.star-cont {
+		display: inline-block;
+		margin-bottom: 48px;
+		img {
+			display: inline-block;
+			width: 24px;
+			margin: 0 4px;
+		}
+	}
+}
+
+/*TRIPS*/
+.rec-tours {
+	h2 {
+		font-size:2.25em;
+		color: $fontGreen;
+		text-align: left;
+		padding: 24px;
+	}
+
+	.container {
+			background: none;
+			position: relative;
+		h3{
+			color: $fontBlack;
+			position:relative;
+		}
+		.clip {
+			height: 100%;
+			margin: 0 24px;
+		  	overflow: hidden;
+			  bottom: 0;
+			img {
+				width: 100%;
+			}
+			h3 {
+				margin: 0 auto;
+			}
+		}
+		.sugginfo {
+			position: relative;
+			@include flexme(flex-start, left);
+			text-align: left;
+			padding: 12px 0;
+		}
+	
+		.sugginfo img{
+			width: 53px;
+			height: 72px;
+		}
+		.suggtext { 
+			padding: 0 12px;
+			h3 {
+				max-width: none;
+			}
+			.rating {
+				position: absolute;
+				right: 12px;
+				bottom: 0;
+			}
+		}
+	}
+	
 }
