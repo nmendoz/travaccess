@@ -13,9 +13,6 @@
     .expe-head .abo-tag .alr {
         width: 85vw !important;
     }
-    .expe-head .tag-col {
-	    height: 120px;
-    }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -57,9 +54,21 @@
         margin: 24px auto;
         width: 65% !important;
     }
+    /*REVIEWS*/
+    .expe-revs .contain {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 984px) {
+    /*GENERAL*/
+    .submission {
+        max-width: 100% !important;
+    }
+    .sm-news input {
+        display: block;
+        margin: 24px auto !important;
+    }
     /*HOMEPAGE*/
     #summary .sum-img-cont {
         display: block;
@@ -76,10 +85,103 @@
     #long {
         margin: 24px auto !important;
     }
+    /*EXPEDITIONS*/
+    .expe-head .spec-but {
+        color: white;
+        background: #3e695d;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    .expe-head .spec-but a{
+        background: #b3ccc3 !important;
+        color: #3e695d !important;
+    }
+    #itinerary .it-content {
+        display: block;
+    }
+    #itinerary .it-content img {
+        width: 100%;
+    }
+    #itinerary .text-cont {
+        width: 100%;
+    }
+    #itinerary .text-cont h2 {
+        margin: 24px 0;
+    }
+    #hostnotes .hosts-cont {
+        display: block;
+        text-align: justify;
+        text-align-last: center;
+        width: 100%;
+    }
+    #hostnotes .host-info-cont {
+        text-align: inherit;
+        width: 100%;
+    }
+    #reviews .feat-row {
+        display: block;
+        text-align: justify;
+        text-align-last: center;
+    }
+    #reviews .feat-row img{
+        width: 45%;
+    }
+    #reviews .reviewee-cont {
+        text-align: inherit;
+        max-width: 100%;
+    }
+    #reviews .reviewee-cont h3{
+        margin: 0 !important;
+        max-width: 100%;
+    }
+    #reviews .star-cont img {
+        width: 24px;
+    }
+    #suggestions .sugg-cont {
+        display: block;
+    }
+    #suggestions .sugg-col {
+        width: 100%;
+        margin: 32px 0;
+    }
+    #suggestions .rating {
+        right: 24px !important;
+    }
+
+    #notesterms .nt-row {
+        display: block;
+    }
+    #notesterms .nt-col, #notesterms .nt-col-l {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
+    #notesterms .nt-col p, #notesterms .nt-col-l p{
+        max-width: 240px;
+        margin: 0 auto;
+    }
+    /*ARTICLE SINGLE*/
+    .page-article .recommend .row {
+        display: block;
+    }
+
+    .page-article .recommend .col {
+        width: 100%;
+        margin: 42px auto;
+    }
 }
 
-@media only screen and (max-width: 800px) and (min-width: 481px) {
-
+@media only screen and (max-width: 800px) {
+    /*EXPEDITIONS*/
+    #inclusions .tictacimg .row {
+        display: block;
+    }
+    #inclusions .tictacimg .col {
+        width: 100%;
+        height: auto;
+        border: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {

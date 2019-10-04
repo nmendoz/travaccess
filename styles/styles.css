@@ -54,6 +54,15 @@ button {
 }
 
 /*PRESETS*/
+.flex {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "aserif";
 }
@@ -983,7 +992,7 @@ footer .flexme {
 
 #inclusions .tictacimg {
   margin: 0 auto;
-  width: 85%;
+  width: 80%;
 }
 
 #inclusions .tictacimg img {
@@ -1003,7 +1012,10 @@ footer .flexme {
 }
 
 #inclusions .tictacimg .col {
-  width: 240px;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  padding: 12px 0;
+  width: 33%;
   height: 240px;
 }
 
@@ -1415,7 +1427,6 @@ footer .flexme {
   height: 85vh;
   display: block;
   color: white;
-  text-align: left;
 }
 
 .abt-hdr img {
@@ -1551,7 +1562,7 @@ footer .flexme {
 }
 
 .abt-ftr .rightitems {
-  right: 210px;
+  right: 11vw;
 }
 
 /*ARTICLES*/
@@ -1569,6 +1580,7 @@ footer .flexme {
 }
 
 .arts-page .left-cont {
+  text-align: left;
   background: url("../images/homepagebg.png");
   background-size: cover;
   color: white;
@@ -1697,6 +1709,10 @@ footer .flexme {
 }
 
 /*ARTICLE SINGLE*/
+.art-hdr {
+  text-align: left !important;
+}
+
 .art-hdr .full-cont {
   position: relative;
   min-height: 768px;
@@ -1709,7 +1725,7 @@ footer .flexme {
   position: absolute;
   bottom: 18%;
   color: white;
-  padding-right: 24px;
+  padding-right: 48px;
 }
 
 .art-hdr .full-cont .text-cont p {
@@ -1883,9 +1899,9 @@ footer .flexme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1899,17 +1915,25 @@ footer .flexme {
   text-align: left;
   display: block;
   width: 640px;
+  padding: 0 4%;
 }
 
 .feat-revs div .text-cont span {
   font-weight: bold;
   text-transform: uppercase;
   border: 1px solid #3e695d;
-  padding: 8px 12px;
+  padding: 12px 24px;
 }
 
 .feat-revs div .text-cont p {
   line-height: 42px;
+}
+
+.feat-revs div .text-cont a {
+  background: transparent;
+  padding: 12px 48px;
+  border: 1px solid #c24728;
+  color: #c24728;
 }
 
 .expe-revs .contain {
@@ -1926,6 +1950,7 @@ footer .flexme {
 
 .expe-revs .contain img {
   max-width: 45%;
+  margin-right: 4%;
 }
 
 .expe-revs .right-cont a {

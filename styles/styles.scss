@@ -71,6 +71,7 @@ input, select, textarea, button {outline: 0; border: 0; appearance: none; -webki
 button {cursor: pointer; background: transparent;}
 
 /*PRESETS*/
+.flex {display: flex; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; -webkit-flex-flow: row wrap; flex-wrap: wrap;}
 h1,h2,h3,h4,h5,h6 {
 	font-family : $serif;
 }
@@ -797,7 +798,7 @@ footer {
 #inclusions {
 	.tictacimg {
 		margin: 0 auto;
-		width: 85%;
+		width: 80%;
 
 		img {
 			width: 120px;
@@ -808,7 +809,9 @@ footer {
 		}
 
 		.col {
-			width: 240px;
+			align-content: stretch;
+			padding: 12px 0;
+			width: 33%;
 			height: 240px;
 			img {
 				margin-top: 24px;
@@ -1125,7 +1128,6 @@ footer {
 /*ABOUT*/
 .abt-hdr {
 	@include fullHead('../images/homepagebg.png');
-	text-align: left;
 	img {
 		float: left;
 		width: 140px;
@@ -1227,7 +1229,7 @@ footer {
 		margin: 0 auto;
 	}
 	.rightitems {
-		right: 210px;
+		right: 11vw;
 	}
 }
 
@@ -1238,6 +1240,7 @@ footer {
 		@include flexme(flex-start, center);
 	}
 	.left-cont {
+		text-align: left;
 		background: url("../images/homepagebg.png");
 		background-size: cover;
 		color: white;
@@ -1339,7 +1342,7 @@ footer {
 
 /*ARTICLE SINGLE*/
 .art-hdr {
-
+	text-align: left !important;
 	.full-cont {
 		position: relative;
 		min-height: 768px;
@@ -1351,7 +1354,7 @@ footer {
 			position: absolute;
 			bottom: 18%;
 			color: white;
-			padding-right: 24px;
+			padding-right: 48px;
 
 			p {
 				max-width: 720px;
@@ -1473,7 +1476,7 @@ footer {
 		margin: 0 0 15vh;
 		width: 100%;
 		display: block;
-		@include flexme(flex-start, space-evenly);
+		@include flexme(center, space-evenly);
 		img {
 			max-width: 40%;
 		}
@@ -1481,15 +1484,19 @@ footer {
 			text-align: left;
 			display: block;
 			width: 640px;
+			padding: 0 4%;
 
 			span {
 				font-weight: bold;
 				text-transform: uppercase;
 				border: 1px solid $fontGreen;
-				padding: 8px 12px;
+				padding: 12px 24px;
 			}
 			p {
 				line-height:42px;
+			}
+			a{
+				@include thebutton($fontReds);
 			}
 		}
 	}
@@ -1500,6 +1507,7 @@ footer {
 		@include flexme(flex-start, center);
 		img {
 			max-width: 45%;
+			margin-right: 4%;
 		}
 	}
 
