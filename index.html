@@ -6,19 +6,22 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Homepage</title>
 	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
 	<header class="hundo headme">
-		<img src="./images/toplogo.png" alt="LOGO HERE" class="flag">
-		<nav>
-			<ul>
-				<li><a href="#">Trips</a></li>
-				<li><a href="#">Gallery</a></li>
-				<li><a href="#">Reviews</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Expedition</a></li>
-			</ul>
-		</nav>
+		<div class="transpnav">
+			<img src="./images/toplogo.png" alt="LOGO HERE" class="flag">
+			<nav>
+				<ul>
+					<li><a href="#">Trips</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">Reviews</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Expedition</a></li>
+				</ul>
+			</nav>
+		</div>
 		<h1>
 			Meet the World
 		</h1>
@@ -30,7 +33,7 @@
 	</div>
 	<section id="summary" class="nothundo whitered">
 		<div class="sum-text-cont">
-				<div class="sum-row">
+				<div class="sum-row padder">
 					<div class="sum-info-col">
 						<img src="images/WebIcons/Icons_Airplane.png" alt="Airplane" style="width: 32%;">
 						<h3>Your Kind of Trip</h3>
@@ -57,7 +60,7 @@
 					</div>
 				</div>
 		</div>
-		<div class="sum-img-cont">
+		<div class="sum-img-cont padder">
 			<div  id="long" class="sum-img-col">
 			</div>
 			<div class="sum-img-col">
@@ -74,7 +77,7 @@
 	</section>
 	
 	<section id="tuts" class="nothundo whitered">
-		<h1>How to Travel with Access</h1>
+		<h1 class="padder">How to Travel with Access</h1>
 		<div class="tuts-row">
 			<div class="tuts-col">
 				<img src="images/CatFlags/Category Flag sticker_Scheduled Trip.png" alt="somlogos" style="width: 20%;">
@@ -114,10 +117,10 @@
 
 	<section id="destinations" class="whitered nothundo">
 		<img src="images/map.png" alt="mapa">
-		<h1>New Destinations</h1>
+		<h1 class="padder">New Destinations</h1>
 		<div class="dest-row">
 			<div class="dest-col">
-				<img src="images/p" alt="Sweden">
+				<img src="images/people.png" alt="Sweden">
 				<h2>Sweden</h2>
 			</div class="dest-col">
 			<div class="dest-col">
@@ -163,7 +166,7 @@
 		</div>
 	</section>
 
-	<section id="newsletter" class="nothundo whitered">
+	<section id="newsletter" class="nothundo whitered padder">
 		<h1>Subscribe</h1>
 		<form method="POST">
 			<input type="name" name="aname" placeholder="Name">

@@ -84,8 +84,11 @@ $(document).ready(function(){
     }
 });
 
-/*TRIP GUIDES SLIDER*/
-$('.trip-guides .center').slick({
+var centeredSlideCont = [];
+centeredSlideCont = $(".clip");
+
+/*CENTERED SLIDER*/
+$('.center').slick({
     centerMode: true,
     infinite: true,
     centerPadding: '240px',
@@ -93,10 +96,42 @@ $('.trip-guides .center').slick({
     slidesToShow: 3,
     variableWidth: true,
   });
+$('.center').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $(centeredSlideCont[nextSlide]).addClass("active-slide");
+  $(centeredSlideCont[currentSlide]).removeClass("active-slide");
+});
 
-$('.rec-tours .multiple-items').slick({
+/*3SLIDE SLIDER*/
+$('.multiple-items').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     variableWidth: false,
   });
+
+/*STORIES SLIDER */
+var storslds = [];
+storslds = $(".stories .slide-content");
+$(storslds[0]).find("p").css("display", "block");
+
+var index = 0;
+$(".stories .btn-next").click (function() {
+    console.log("next slide");
+    if (index < storslds.length-1) {
+        $(storslds[index]).removeClass("active-slide");
+        $(storslds[index]).find("p").css("display", "none");
+        $(storslds[index + 1]).addClass("active-slide",);
+        $(storslds[index + 1]).find("p").delay(420).fadeIn(400);
+        index++;
+    }
+});
+$(".stories .btn-prev").click (function() {
+    console.log("prev slide");
+    if (index > 0) {
+        $(storslds[index]).removeClass("active-slide");
+        $(storslds[index]).find("p").css("display", "none");
+        $(storslds[index - 1]).addClass("active-slide");
+        $(storslds[index - 1]).find("p").delay(420).fadeIn(400);
+        index--;
+    }
+});

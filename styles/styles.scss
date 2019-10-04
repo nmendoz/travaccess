@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 2.75em;
+	font-size: 3.75em;
 	padding: 48px 0;
 }
 
@@ -89,8 +89,8 @@ h3 {
 
 p, a{
 	font-family : $sans;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 18px;
+	line-height: 30px;
 }
 
 span {
@@ -278,8 +278,128 @@ span {
 	}
 }
 
+.inq-yellow {
+	background: $panYell !important;
+}
+
 ::placeholder {
 	color: rgba(255,255,255,0.85);
+}
+
+/*SLIDER PRESETS*/
+.slick-track {
+	padding: 32px 0 !important;
+}
+.slick-prev {
+	left: -98px !important;
+	&::before{
+		content: "" !important;
+	}
+	background: url("../images/leftarr-min.png") !important;
+	background-size: cover !important;
+	z-index: 100;
+	width: 98px;
+	height: 98px;
+}
+.slick-next{
+	right: -98px !important;
+	&::before{
+		content: "" !important;
+	}
+	background: url("../images/rightarr-min.png") !important;
+	background-size: cover !important;
+	z-index: 100;
+	width: 98px;
+	height: 98px;
+}
+.trip-guides .center {
+	.clip {
+		transition-duration: 0.25s;
+	}
+	
+	.active-slide {
+		transform: scale(1.25);
+	}
+}
+
+.stories {
+	#fst-story {
+		background: url('../images/placeholder1-stories.png');
+		background-position: center;
+		background-size: cover;
+	}
+	#sec-story {
+		background: url('../images/placeholder2-stories.png');
+		background-position: center;
+		background-size: cover;
+	}
+	#thr-story {
+		background: url('../images/placeholder1-stories.png');
+		background-position: center;
+		background-size: cover;
+	}
+
+
+	.container {
+		display: block;
+		overflow: hidden;
+		position: relative;
+	}
+	.btn-prev {
+		position: absolute;
+		left: 1%; top: 43%;
+		background: url("../images/leftarrW-min.png");
+		background-size: cover;
+		z-index: 100;
+		width: 98px;
+		height: 98px;
+	}
+	.btn-next {
+		position: absolute;
+		right: 1%; top: 43%;
+		background: url("../images/rightarrW-min.png");
+		background-size: cover;
+		z-index: 100;
+		width: 98px;
+		height: 98px;
+	}
+	.slider {
+		@include flexme(flex-start, flex-start);
+		height: 90vh;
+	}
+	.slide-content {
+		padding: 2%;
+		position: relative;
+		transition-duration: 0.75s;
+		display: inline-block;
+		width: 25%;
+		height: 100%;
+		text-align: center;
+		p {
+			display: none;
+		}
+		img {
+			opacity: 0.85;
+			width: 100%;
+		}
+	}
+	.text-cont {
+		margin-top: 25%;
+		h2, p, span {
+			color: white;
+		}
+		p {
+			margin-top: 2%;
+		}
+		text-align: left;
+	}
+	.active-slide {
+		padding: 4% 8%;
+		width: 50% !important;
+		h2 {
+			font-size: 3.25em;
+		}
+	}
 }
 
 /*INDEX*/
@@ -586,6 +706,7 @@ footer {
 			padding: 0 72px;
 			border-bottom: 1px solid $fontGreen;
 			@include flexme(center, space-between);
+			align-content: stretch;
 			position: relative;
 			.tag-col {
 				text-align: center;
@@ -642,7 +763,7 @@ footer {
 
 	.bot-sum {
 		margin-top: 3vh !important;
-
+		position: relative;
 		.twit-tags {
 			max-width: 800px;
 			@include flexme(center, space-evenly);
@@ -653,8 +774,9 @@ footer {
 			}
 		}
 		input {
+			position: absolute;
+			top: 0%; right: 0;
 			color: $fontGreen;
-			float: right;
 			border: 1px solid $fontGreen;
 			background: transparent;
 			padding: 6px 18px;
@@ -935,7 +1057,7 @@ footer {
 	}
 	p {
 		margin: 0 auto;
-		max-width: 320px;
+		max-width: 420px;
 	}
 
 	.submission {
@@ -1074,14 +1196,17 @@ footer {
 	.row {
 		@include flexme(center, center);
 		img {
-			width : 320px;
+			width : 420px;
 		}
 		.text-cont{
-			margin-left: 48px;
-			max-width: 480px;
+			margin:0 auto;
+			max-width: 640px;
 			text-align: left;
 			h1 {
 				padding: 12px 0;
+			}
+			p {
+				line-height: 42px;
 			}
 		}
 		.col {
@@ -1102,7 +1227,7 @@ footer {
 		margin: 0 auto;
 	}
 	.rightitems {
-		right: 120px;
+		right: 210px;
 	}
 }
 
@@ -1426,8 +1551,45 @@ footer {
 	}
 }
 
+.client-revs {
+		.container {
+			background: none;
+			position: relative;
+		.clip {
+			margin: 0 24px;
+			width: 240px;
+			overflow: hidden;
+			bottom: 0;
+			img {
+				margin: 0 auto;
+				width: 65%;
+			}
+			h3 {
+				margin: 0 auto;
+			}
+			.star-cont {
+				display: block;
+				margin-bottom: 48px;
+				img {
+					display: inline-block;
+					width: 24px;
+					margin: 0 4px;
+				}
+			}
+		}
+	}
+}
+
 /*TRIPS*/
-.rec-tours {
+.trip-hdr{
+	p {
+		margin: 0 auto;
+		padding: 12px 0;
+		max-width: 800px;
+	}
+}
+
+.rec-tours, .acc-exp {
 	h2 {
 		font-size:2.25em;
 		color: $fontGreen;

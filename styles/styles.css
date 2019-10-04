@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.75em;
+  font-size: 3.75em;
   padding: 48px 0;
 }
 
@@ -72,8 +72,8 @@ h3 {
 
 p, a {
   font-family: "asans";
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 span {
@@ -286,6 +286,10 @@ span {
   text-decoration: none;
 }
 
+.inq-yellow {
+  background: #dfd0a5 !important;
+}
+
 ::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.85);
 }
@@ -300,6 +304,148 @@ span {
 
 ::placeholder {
   color: rgba(255, 255, 255, 0.85);
+}
+
+/*SLIDER PRESETS*/
+.slick-track {
+  padding: 32px 0 !important;
+}
+
+.slick-prev {
+  left: -98px !important;
+  background: url("../images/leftarr-min.png") !important;
+  background-size: cover !important;
+  z-index: 100;
+  width: 98px;
+  height: 98px;
+}
+
+.slick-prev::before {
+  content: "" !important;
+}
+
+.slick-next {
+  right: -98px !important;
+  background: url("../images/rightarr-min.png") !important;
+  background-size: cover !important;
+  z-index: 100;
+  width: 98px;
+  height: 98px;
+}
+
+.slick-next::before {
+  content: "" !important;
+}
+
+.trip-guides .center .clip {
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+.trip-guides .center .active-slide {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.stories #fst-story {
+  background: url("../images/placeholder1-stories.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.stories #sec-story {
+  background: url("../images/placeholder2-stories.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.stories #thr-story {
+  background: url("../images/placeholder1-stories.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.stories .container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.stories .btn-prev {
+  position: absolute;
+  left: 1%;
+  top: 43%;
+  background: url("../images/leftarrW-min.png");
+  background-size: cover;
+  z-index: 100;
+  width: 98px;
+  height: 98px;
+}
+
+.stories .btn-next {
+  position: absolute;
+  right: 1%;
+  top: 43%;
+  background: url("../images/rightarrW-min.png");
+  background-size: cover;
+  z-index: 100;
+  width: 98px;
+  height: 98px;
+}
+
+.stories .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 90vh;
+}
+
+.stories .slide-content {
+  padding: 2%;
+  position: relative;
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+}
+
+.stories .slide-content p {
+  display: none;
+}
+
+.stories .slide-content img {
+  opacity: 0.85;
+  width: 100%;
+}
+
+.stories .text-cont {
+  margin-top: 25%;
+  text-align: left;
+}
+
+.stories .text-cont h2, .stories .text-cont p, .stories .text-cont span {
+  color: white;
+}
+
+.stories .text-cont p {
+  margin-top: 2%;
+}
+
+.stories .active-slide {
+  padding: 4% 8%;
+  width: 50% !important;
+}
+
+.stories .active-slide h2 {
+  font-size: 3.25em;
 }
 
 /*INDEX*/
@@ -696,6 +842,8 @@ footer .flexme {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   position: relative;
 }
 
@@ -774,6 +922,7 @@ footer .flexme {
 
 .expe-head .bot-sum {
   margin-top: 3vh !important;
+  position: relative;
 }
 
 .expe-head .bot-sum .twit-tags {
@@ -796,8 +945,10 @@ footer .flexme {
 }
 
 .expe-head .bot-sum input {
+  position: absolute;
+  top: 0%;
+  right: 0;
   color: #3e695d;
-  float: right;
   border: 1px solid #3e695d;
   background: transparent;
   padding: 6px 18px;
@@ -1174,7 +1325,7 @@ footer .flexme {
 
 #inquire p {
   margin: 0 auto;
-  max-width: 320px;
+  max-width: 420px;
 }
 
 #inquire .submission {
@@ -1364,17 +1515,21 @@ footer .flexme {
 }
 
 .mt-n-grt .row img {
-  width: 320px;
+  width: 420px;
 }
 
 .mt-n-grt .row .text-cont {
-  margin-left: 48px;
-  max-width: 480px;
+  margin: 0 auto;
+  max-width: 640px;
   text-align: left;
 }
 
 .mt-n-grt .row .text-cont h1 {
   padding: 12px 0;
+}
+
+.mt-n-grt .row .text-cont p {
+  line-height: 42px;
 }
 
 .mt-n-grt .row .col {
@@ -1396,7 +1551,7 @@ footer .flexme {
 }
 
 .abt-ftr .rightitems {
-  right: 120px;
+  right: 210px;
 }
 
 /*ARTICLES*/
@@ -1833,40 +1988,78 @@ footer .flexme {
   margin: 0 4px;
 }
 
+.client-revs .container {
+  background: none;
+  position: relative;
+}
+
+.client-revs .container .clip {
+  margin: 0 24px;
+  width: 240px;
+  overflow: hidden;
+  bottom: 0;
+}
+
+.client-revs .container .clip img {
+  margin: 0 auto;
+  width: 65%;
+}
+
+.client-revs .container .clip h3 {
+  margin: 0 auto;
+}
+
+.client-revs .container .clip .star-cont {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.client-revs .container .clip .star-cont img {
+  display: inline-block;
+  width: 24px;
+  margin: 0 4px;
+}
+
 /*TRIPS*/
-.rec-tours h2 {
+.trip-hdr p {
+  margin: 0 auto;
+  padding: 12px 0;
+  max-width: 800px;
+}
+
+.rec-tours h2, .acc-exp h2 {
   font-size: 2.25em;
   color: #3e695d;
   text-align: left;
   padding: 24px;
 }
 
-.rec-tours .container {
+.rec-tours .container, .acc-exp .container {
   background: none;
   position: relative;
 }
 
-.rec-tours .container h3 {
+.rec-tours .container h3, .acc-exp .container h3 {
   color: #393738;
   position: relative;
 }
 
-.rec-tours .container .clip {
+.rec-tours .container .clip, .acc-exp .container .clip {
   height: 100%;
   margin: 0 24px;
   overflow: hidden;
   bottom: 0;
 }
 
-.rec-tours .container .clip img {
+.rec-tours .container .clip img, .acc-exp .container .clip img {
   width: 100%;
 }
 
-.rec-tours .container .clip h3 {
+.rec-tours .container .clip h3, .acc-exp .container .clip h3 {
   margin: 0 auto;
 }
 
-.rec-tours .container .sugginfo {
+.rec-tours .container .sugginfo, .acc-exp .container .sugginfo {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1881,20 +2074,20 @@ footer .flexme {
   padding: 12px 0;
 }
 
-.rec-tours .container .sugginfo img {
+.rec-tours .container .sugginfo img, .acc-exp .container .sugginfo img {
   width: 53px;
   height: 72px;
 }
 
-.rec-tours .container .suggtext {
+.rec-tours .container .suggtext, .acc-exp .container .suggtext {
   padding: 0 12px;
 }
 
-.rec-tours .container .suggtext h3 {
+.rec-tours .container .suggtext h3, .acc-exp .container .suggtext h3 {
   max-width: none;
 }
 
-.rec-tours .container .suggtext .rating {
+.rec-tours .container .suggtext .rating, .acc-exp .container .suggtext .rating {
   position: absolute;
   right: 12px;
   bottom: 0;

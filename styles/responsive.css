@@ -1,0 +1,104 @@
+/*QUERIES  1600 1440 1366 1280 1024 800 600 480 375*/
+@media only screen and (max-width: 1366px) {
+    /*EXPEDITIONS*/
+    .expe-head .abo-tag .spec-but {
+        width: 100% !important;
+    }
+    .expe-head .name-cont {
+        width: 12vw !important;
+    }
+    .expe-head .ball span{
+        width: 20vw !important;
+    }
+    .expe-head .abo-tag .alr {
+        width: 85vw !important;
+    }
+    .expe-head .tag-col {
+	    height: 120px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    /*HOMEPAGE*/
+    #trips .trip-row{
+        display: block;
+    }
+    #trips .trip-col {
+        margin: 24px auto;
+    }
+    #trips .trip-col img{
+        max-width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    /*HOMEPAGE*/
+    #summary .sum-row {
+        display: block !important;
+    }
+    #summary .sum-info-col {
+        margin: 24px auto;
+        text-align: justify;
+        text-align-last: center;
+    }
+    #tuts .tuts-row {
+        display: block;
+    }
+    #tuts .tuts-col {
+        margin: 24px auto 86px;
+    }
+    #destinations img {
+        width: 85%;
+    }
+    #destinations .dest-row {
+        display: block;
+    }
+    #destinations .dest-col {
+        margin: 24px auto;
+        width: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 984px) {
+    /*HOMEPAGE*/
+    #summary .sum-img-cont {
+        display: block;
+    }
+    #summary .sum-img-cont .sum-img-row-col {
+        display: block;
+    }
+    #summary .spec {
+        margin: 24px auto !important;
+    }
+    #summary .sum-img-row {
+        margin: 24px auto !important;
+    }
+    #long {
+        margin: 24px auto !important;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+    /*HOMEPAGE*/
+    #trips .trip-col img{
+        max-width: 75%;
+    }
+    footer {
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+    footer .rightitems {
+        right: 24px;
+    }
+}
+
+@media only screen and (max-width: 480px)  {
+    /*HOMEPAGE*/
+    #newsletter input{
+        max-width: 100% !important;
+    }
+}
