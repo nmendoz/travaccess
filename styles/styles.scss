@@ -35,6 +35,9 @@
 	height: 85vh;
 	display : block;
 	color : white;
+	h1 {
+		margin-top: 10%;
+	}
 }
 
 @mixin inputPreset ($color) {
@@ -45,6 +48,7 @@
 	border: 1px solid $color;
 	&::placeholder {
 		color: $color;
+		opacity: 0.75;
 	}
 }
 
@@ -229,6 +233,27 @@ span {
 		background-size: cover;
 	}
 }
+//FIXED NAV MOBILE
+.fixnav {
+	display: none;
+	background-color: white;
+	padding: 12px 48px;
+	position: fixed;
+	z-index: 200;
+	img {
+		width: 140px;
+	}
+
+	.burger-drop {
+		width: 64px; height: 64px;
+		background: url("../images/dropwdown.png");
+		background-size: cover;
+	}
+	.drop {
+		position: absolute;
+		display: none;
+	}
+}
 
 .whitenav {
 	@include flexme(center, space-between);
@@ -279,6 +304,12 @@ span {
 	}
 }
 
+.lang {
+	position: absolute;
+	top: 12px;
+	right: 0;
+}
+
 .inq-yellow {
 	background: $panYell !important;
 }
@@ -288,6 +319,13 @@ span {
 }
 
 /*SLIDER PRESETS*/
+.container {
+	width: 100%;
+	.slider {
+		margin: 0 auto;
+		width: 78%;
+	}
+}
 .slick-track {
 	padding: 32px 0 !important;
 }
@@ -299,8 +337,8 @@ span {
 	background: url("../images/leftarr-min.png") !important;
 	background-size: cover !important;
 	z-index: 100;
-	width: 98px;
-	height: 98px;
+	width: 98px !important;
+	height: 98px !important;
 }
 .slick-next{
 	right: -98px !important;
@@ -310,8 +348,8 @@ span {
 	background: url("../images/rightarr-min.png") !important;
 	background-size: cover !important;
 	z-index: 100;
-	width: 98px;
-	height: 98px;
+	width: 98px !important;
+	height: 98px !important;
 }
 .trip-guides .center {
 	.clip {
@@ -323,6 +361,7 @@ span {
 	}
 }
 
+/*STORIES SLIDER*/
 .stories {
 	#fst-story {
 		background: url('../images/placeholder1-stories.png');
@@ -367,6 +406,8 @@ span {
 	.slider {
 		@include flexme(flex-start, flex-start);
 		height: 90vh;
+		width: inherit;
+		margin: inherit;
 	}
 	.slide-content {
 		padding: 2%;
@@ -389,10 +430,18 @@ span {
 		h2, p, span {
 			color: white;
 		}
+		h2 {
+			padding-top: 24px;
+		}
 		p {
 			margin-top: 2%;
 		}
 		text-align: left;
+		span {
+			text-transform: uppercase;
+			border: 1px solid white;
+			padding: 4px 12px;
+		}
 	}
 	.active-slide {
 		padding: 4% 8%;
@@ -409,9 +458,6 @@ span {
 	img {
 		float: left;
 		width: 140px;
-	}
-	h1 {
-		margin-top: 25vh;
 	}
 	input {
 		color: white;
@@ -456,12 +502,17 @@ span {
 	.sum-row {
 		display: flex;
 		align-items: flex-start;
-		justify-content: space-evenly;
+		justify-content: center;
 	}
 
 	.sum-info-col {
-		text-align: center;
+		margin: 0 24px;
+		text-align: justify;
+		text-align-last: center;
 		max-width: 280px;
+		img {
+			width: 32%;
+		}
 	}
 
 	.sum-img-cont {
@@ -521,6 +572,9 @@ span {
 
 	.tuts-col {
 		max-width: 280px;
+		img {
+			width: 20%;
+		}
 		h3 {
 			padding: 24px;
 		}
@@ -570,27 +624,30 @@ span {
 	}
 
 	.trip-col {
+		width: 30%;
 		position: relative;
 		list-style-type: none;
 		h3 {
+			max-width: 100%;
 			color: white;
-			font-size: 35px;
+			font-size: 3em;
 			position: absolute;
 			top: 43%;
-			left: 40%;
+			width: 100%;
 		}
 	}
 
 	.trip-col img {
-		max-width: 88%;
+		max-width: 100%;
 	}
 }
 
 #newsletter {
+	width: 75%;
 	input {
 		color: $fontReds;
 		margin: 24px auto;
-		width: 320px;
+		width: 420px;
 		display: block;
 		border : 1px solid rgba(90, 151, 134, 0.95);
 		padding: 12px;
@@ -611,13 +668,21 @@ span {
 }
 
 footer {
+	text-align: left !important;
 	color: $fontGreen;
 	position: relative;
-	padding-bottom : 72px;
-	.above {
-		margin-bottom: 72px;
+	padding: 24px 0 72px 0;
+	.flexme {
+		width: 250px;
+		@include flexme(center, center);
+		img {
+			width: 20%;
+		}
 	}
-	
+
+	div div:first-child {
+		margin-top: 24px;
+	}
 	h3 {
 		color: $fontGreen;
 		margin-bottom: 20px;
@@ -633,16 +698,16 @@ footer {
 		justify-content: space-between;
 	}
 	.rightitems {
+		margin-top: 24px;
 		position: absolute;
 		right: 0;
-		bottom: 120px;
-	.soc-group {
-		margin-bottom: 48px;
-	}
+		top: 0;
+		.soc-group {
+			width: 120px;
+		}
 
-		.soc-row a {
-			margin-right: 12px;
-			display: inline-block;
+		.soc-row {
+			@include flexme(center, space-between);
 		}
 		.soc-group .soc-row img {
 			width: 28px;
@@ -661,11 +726,8 @@ footer {
 		color: $fontGreen;
 	}
 
-	.flexme {
-		width: 250px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+	.below {
+		position: relative;
 	}
 }
 
@@ -764,12 +826,15 @@ footer {
 
 	.bot-sum {
 		margin-top: 3vh !important;
+		padding: 0 0 8%;
 		position: relative;
 		.twit-tags {
-			max-width: 800px;
-			@include flexme(center, space-evenly);
+			max-width: 80%;
+			@include flexme(center, center);
 			margin: 12px auto 0 auto;
-			span {
+			div{
+				margin: 0 8px;
+				max-width: 320px;
 				padding: 4px 12px;
 				border: 1px solid $fontGreen;
 			}
@@ -798,24 +863,21 @@ footer {
 #inclusions {
 	.tictacimg {
 		margin: 0 auto;
-		width: 80%;
+		width: 75%;
 
 		img {
-			width: 120px;
+			width: 35%;
 		}
 
 		.row {
-			@include flexme(flex-start, center );
+			display: flex;
+			align-content: stretch;
 		}
 
 		.col {
 			align-content: stretch;
-			padding: 12px 0;
+			padding: 3% 2%;
 			width: 33%;
-			height: 240px;
-			img {
-				margin-top: 24px;
-			}
 		}
 
 		.borderall {
@@ -834,12 +896,40 @@ footer {
 
 #itinerary {
 	.it-content {
-		@include flexme(center, space-evenly);
-		margin-bottom: 42px;
+		// @include flexme(center, center);
+		display: flex;
+		align-content: stretch;
+		justify-content: center;
+		padding-bottom: 32px;
 	}
 
 	.it-content img {
 		width: 32%;
+	}
+
+	.special-numbering {
+		display: block;
+		margin: 16px 24px;
+	}
+	.special-numbering .circle {
+		width: 64px; height: 64px;
+		border-radius: 50%;
+		border: 2px solid $fontGreen;
+		display: block;
+		position: relative;
+		h3 {
+			display: block;
+			position: absolute;
+			left: 24px;
+			top: 20px;
+	
+		}
+	}
+
+	.special-numbering .border {
+		border-right: 2px solid $fontGreen;
+		height: 100%;
+		width: 50%;
 	}
 	.text-cont {
 		text-align: left;
@@ -946,47 +1036,42 @@ footer {
 }
 
 #notesterms {
+	.nt-cont {
+		width: 80%;
+		margin: 0 auto;
+	}
 	.nt-row {
-		@include flexme(center, center);
+		display: flex;
+		justify-content: center;
+		align-content: stretch;
 	}
-	
-	.ball {
-		border-left: 1px solid $fontGreen;
-		border-top: 1px solid $fontGreen;
-		border-right: 1px solid $fontGreen;
+	.nt-cont div:last-child div{
+		border-bottom: none;
 	}
-
-	.rd {
-		border-right: 1px solid $fontGreen;
-		border-bottom:  1px solid $fontGreen;
-	}
-
-	.ld{
-		border-left: 1px solid $fontGreen;
-		border-bottom:  1px solid $fontGreen;
-	}
-
-	.bm {
-		border-right: 1px solid $fontGreen;
+	.nt-row div:last-child {
+		border-right: none;
 	}
 
 	.nt-col {
-		width: 240px;
-		height: 240px;
-		padding: 24px;
+		width: 25%;
+		padding: 0 24px 24px 24px;
 		img {
-			margin-top: 72px;
-			width: 25%;
+			margin-top: 20%;
+			width: 35%;
 		}
+		border-bottom: 1px solid $fontGreen;
+		border-right: 1px solid $fontGreen;
 	}
 
 	.nt-col-l {
-		width:  480px;
-		height : 240px;
+		width:  50%;
 		img {
-			margin-top: 78px;
-			width: 25%;
+			margin-top: 7%;
+			width: 35%;
 		}
+		
+		border-bottom: 1px solid $fontGreen;
+		border-right: 1px solid $fontGreen;
 	}
 }
 
@@ -1021,7 +1106,7 @@ footer {
 		}
 		.rating {
 			position: absolute;
-			right: 12px;
+			right: 0;
 			bottom: 0;
 		}
 	}
@@ -1134,9 +1219,10 @@ footer {
 	}
 
 	.text-cont {
+		text-align: left;
 		padding: 0 8vw;
 		h1 {
-			margin-top: 25vh;
+			margin-top: 10%;
 			font-size: 3em;
 			line-height: 1.75em;
 			max-width: 400px;
@@ -1184,25 +1270,34 @@ footer {
 	.sum-row {
 		display: flex;
 		align-items: flex-start;
-		justify-content: space-evenly;
+		justify-content: center;
 		margin: 64px 0;
 	}
 
 	.sum-info-col {
-		text-align: center;
+		margin: 0 24px;
+		text-align: justify;
+		text-align-last: center;
 		max-width: 280px;
+		img {
+			margin: 0 auto;
+			width: 32%;
+		}
 	}
 }
 
 .mt-n-grt {
+	.row:first-child img{
+		width: 35%;
+	}
 	.row {
-		@include flexme(center, center);
+		@include flexme(center, space-evenly);
 		img {
-			width : 420px;
+			width : 75%;
 		}
 		.text-cont{
-			margin:0 auto;
-			max-width: 640px;
+			margin:0 5%;
+			max-width: 45%;
 			text-align: left;
 			h1 {
 				padding: 12px 0;
@@ -1212,7 +1307,6 @@ footer {
 			}
 		}
 		.col {
-			margin: 0 24px;
 			h2{
 				color: $fontGreen;
 			}
@@ -1248,6 +1342,7 @@ footer {
 		width: 100%;
 	}
 	.right-cont {
+		user-select: none;
 		padding-top: 6%;
 		background: $panLGreen;
 		height: 100%;
@@ -1435,7 +1530,7 @@ footer {
 		input {
 			padding: 24px 0;
 			@include inputPreset($fontGreen);
-			margin: 0 24px;
+			margin: 12px 24px;
 		}
 
 		button{
@@ -1483,7 +1578,7 @@ footer {
 		.text-cont {
 			text-align: left;
 			display: block;
-			width: 640px;
+			width: 50%;
 			padding: 0 4%;
 
 			span {
@@ -1494,11 +1589,18 @@ footer {
 			}
 			p {
 				line-height:42px;
+				margin-bottom: 48px;
 			}
 			a{
 				@include thebutton($fontReds);
+				padding: 12px 96px !important;
+				font-weight: bolder;
 			}
 		}
+	}
+
+	div:first-child div a {
+		float: right;
 	}
 }
 

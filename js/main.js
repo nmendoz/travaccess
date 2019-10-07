@@ -9,6 +9,7 @@ popTab = $("#popular-tab").children();
 hdrTrendCont = $(".trend-cont").children();
 hdrPopCont = $(".pop-cont").children();
 
+
 /*ARTICLES PAGE HEADER*/
 $(document).ready(function(){
     $(hdrTrendCont[0]).css("display", "block");
@@ -40,22 +41,22 @@ $(document).ready(function(){
     for (var i = 0; i < trendTab.length; i++){
         trendTab[i].index = i;
         trendTab[i].addEventListener("click", function(e){
-            for (var x = 0; x < trendTab.length; x++) {
-                if($(trendTab[x]).hasClass("active")) {
-                    $(trendTab[x]).removeClass("active");
+            if (!$(this).hasClass("active")) {
+                for (var x = 0; x < trendTab.length; x++) {
+                    if($(trendTab[x]).hasClass("active")) {
+                        $(trendTab[x]).removeClass("active");
+                    }
+                    if($(hdrTrendCont[x]).hasClass("active-cont")) {
+                        $(hdrTrendCont[x]).removeClass("active-cont");
+                        $(hdrTrendCont[x]).hide();
+                    }
                 }
-                if($(hdrTrendCont[x]).hasClass("active-cont")) {
-                    $(hdrTrendCont[x]).removeClass("active-cont");
-                    $(hdrTrendCont[x]).hide();
-                }
-            }
-            if (!$(this).hasClass("active")){
                 $(this).addClass("active");
             }
-            console.log(e.target.closest("li"));
             if (!$(hdrTrendCont[e.target.closest("li").index]).hasClass("active-cont")){
                 $(hdrTrendCont[e.target.closest("li").index]).addClass("active-cont");
                 $(hdrTrendCont[e.target.closest("li").index]).fadeIn(400);
+                console.log("fading in");
             }
         });
     }
@@ -75,7 +76,6 @@ $(document).ready(function(){
             if (!$(this).hasClass("active")){
                 $(this).addClass("active");
             }
-            console.log(e.target.closest("li"));
             if (!$(hdrPopCont[e.target.closest("li").index]).hasClass("active-cont")){
                 $(hdrPopCont[e.target.closest("li").index]).addClass("active-cont");
                 $(hdrPopCont[e.target.closest("li").index]).fadeIn(400);
@@ -132,7 +132,6 @@ $(storslds[0]).find("p").css("display", "block");
 
 var index = 0;
 $(".stories .btn-next").click (function() {
-    console.log("next slide");
     if (index < storslds.length-1) {
         $(storslds[index]).removeClass("active-slide");
         $(storslds[index]).find("p").css("display", "none");
@@ -142,7 +141,6 @@ $(".stories .btn-next").click (function() {
     }
 });
 $(".stories .btn-prev").click (function() {
-    console.log("prev slide");
     if (index > 0) {
         $(storslds[index]).removeClass("active-slide");
         $(storslds[index]).find("p").css("display", "none");
@@ -150,4 +148,11 @@ $(".stories .btn-prev").click (function() {
         $(storslds[index - 1]).find("p").delay(420).fadeIn(400);
         index--;
     }
+});
+
+var dropState = false;
+/*DROPDOWN*/
+$(".burger-drop").click(function () {
+    dropState = !dropState;
+    //PUT DROP CONDITIONS HERE
 });

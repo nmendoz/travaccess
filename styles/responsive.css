@@ -1,4 +1,23 @@
 /*QUERIES  1600 1440 1366 1280 1024 800 600 480 375*/
+@media only screen and (max-width: 948px) and (min-width: 601px){
+    /*FONT SCALE DOWN*/
+    h1 {
+        font-size: 3em !important;
+    } 
+    h2 {
+        font-size: 2em !important;
+    }
+    h3 {
+        font-size: 1.15em !important;
+    }
+    p, a, span {
+        font-size: 16px !important;
+    }
+    .trip-col h3 {
+        font-size: 3em !important;
+    }
+}
+
 @media only screen and (max-width: 1366px) {
     /*EXPEDITIONS*/
     .expe-head .abo-tag .spec-but {
@@ -16,25 +35,30 @@
 }
 
 @media only screen and (max-width: 1280px) {
-    /*HOMEPAGE*/
-    #trips .trip-row{
-        display: block;
-    }
-    #trips .trip-col {
-        margin: 24px auto;
-    }
-    #trips .trip-col img{
-        max-width: 60%;
+    /*EXPEDITIONS*/
+    .bot-sum input {
+        position: relative !important;
     }
 }
 
 @media only screen and (max-width: 1024px) {
+    /*TRIP SECTION*/
+    #trips .trip-row{
+        display: block;
+    }
+    #trips .trip-col {
+        width: 75%;
+        margin: 24px auto;
+    }
+    #trips .trip-col img{
+        max-width: 100%;
+    }
     /*HOMEPAGE*/
-    #summary .sum-row {
+    .sum-row {
         display: block !important;
     }
-    #summary .sum-info-col {
-        margin: 24px auto;
+    .sum-info-col {
+        margin: 10vh auto !important;
         text-align: justify;
         text-align-last: center;
     }
@@ -58,9 +82,27 @@
     .expe-revs .contain {
         display: block;
     }
+    .expe-revs .nomarg {
+        margin-right: 0 !important;
+    }
+    /*ABOUT*/
+    .mt-n-grt .row {
+        display: block;
+    }
+    .mt-n-grt .row:first-child img {
+        width: 50%;
+    }
+    .mt-n-grt .col {
+        margin: 5% auto;
+    }
+    .mt-n-grt .row .text-cont {
+        margin: 0 auto;
+        max-width: 75%;
+    }
 }
 
 @media only screen and (max-width: 984px) {
+    
     /*GENERAL*/
     .submission {
         max-width: 100% !important;
@@ -69,6 +111,26 @@
         display: block;
         margin: 24px auto !important;
     }
+    .slick-prev {
+        left: -75px !important;
+    }
+    .slick-next {
+        right: -75px !important;
+    }
+    /* THE NAV */
+    .transpnav, .whitenav {
+        display: none;
+    }
+    .fixnav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header {
+        padding-top: 95.1px !important;
+    }
+
+
     /*HOMEPAGE*/
     #summary .sum-img-cont {
         display: block;
@@ -85,8 +147,16 @@
     #long {
         margin: 24px auto !important;
     }
+    .twit-tags {
+        display: block !important;
+    }
+    .twit-tags div { 
+        margin: 12px auto !important;
+    }
+    
     /*EXPEDITIONS*/
     .expe-head .spec-but {
+        z-index: 24;
         color: white;
         background: #3e695d;
         position: fixed;
@@ -96,6 +166,9 @@
     .expe-head .spec-but a{
         background: #b3ccc3 !important;
         color: #3e695d !important;
+    }
+    #itinerary .special-numbering {
+        display: none;
     }
     #itinerary .it-content {
         display: block;
@@ -182,12 +255,34 @@
         height: auto;
         border: none;
     }
+    .int h2 {
+        text-align: center;
+    }
+    .dom h2 {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    /*FONTS*/
+    .trip-col h3 {
+        font-size: 2.5em !important;
+    }
+    h1 {
+        font-size: 2.5em !important;
+    }
+    h2 {
+        font-size: 2em !important
+    }
+    h3 {
+        font-size: 1.15em !important;
+    }
+    a, p, span{
+        font-size: 14px !important;
+    }
     /*HOMEPAGE*/
     #trips .trip-col img{
-        max-width: 75%;
+        max-width: 100%;
     }
     footer {
         width: 100% !important;
@@ -195,6 +290,20 @@
     }
     footer .rightitems {
         right: 24px;
+    }
+    /*ABOUT*/
+    .mt-n-grt .row:first-child img {
+        width: 85%;
+    }
+    /*FOOTER*/
+    footer .leftitems {
+        width: 240px;
+    }
+    footer .soc-group {
+        width: 88px !important;
+    }
+    footer .rightitems .soc-row img{
+        width: 20px !important;
     }
 }
 
