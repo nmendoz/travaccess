@@ -100,6 +100,7 @@ p, a{
 
 span {
 	font-family : $mono;
+	font-size: 18px;
 }
 
 
@@ -122,17 +123,10 @@ span {
 	text-align: center;
 }
 
-.greengreen {
-	text-align: center;
-	color : $fontGreen;
-	background-color : $panGreen;
-	padding : 64px 20vw;
-}
-
 .whitegreen {
 	text-align: center;
 	color : $fontGreen;
-	padding : 64px 20vw;
+	padding : 64px 5vw;
 }
 
 .whitered{
@@ -142,12 +136,6 @@ span {
 	p, a, span {
 		color : $fontGreen;
 	}
-}
-
-.yellowgreen {
-	background-color: $panYell;
-	color : $fontGreen;
-	padding : 64px 20vw;
 }
 
 .padder {
@@ -320,36 +308,37 @@ span {
 
 /*SLIDER PRESETS*/
 .container {
-	width: 100%;
+	width: 78%;
+	margin: 0 auto;
 	.slider {
 		margin: 0 auto;
-		width: 78%;
+		width: 100%;
 	}
 }
 .slick-track {
 	padding: 32px 0 !important;
 }
 .slick-prev {
-	left: -98px !important;
+	left: -98px;
 	&::before{
 		content: "" !important;
 	}
 	background: url("../images/leftarr-min.png") !important;
 	background-size: cover !important;
 	z-index: 100;
-	width: 98px !important;
-	height: 98px !important;
+	width: 98px;
+	height: 98px;
 }
 .slick-next{
-	right: -98px !important;
+	right: -98px;
 	&::before{
 		content: "" !important;
 	}
 	background: url("../images/rightarr-min.png") !important;
 	background-size: cover !important;
 	z-index: 100;
-	width: 98px !important;
-	height: 98px !important;
+	width: 98px;
+	height: 98px;
 }
 .trip-guides .center {
 	.clip {
@@ -384,6 +373,7 @@ span {
 		display: block;
 		overflow: hidden;
 		position: relative;
+		width: 100% !important;
 	}
 	.btn-prev {
 		position: absolute;
@@ -445,7 +435,7 @@ span {
 	}
 	.active-slide {
 		padding: 4% 8%;
-		width: 50% !important;
+		width: 50%;
 		h2 {
 			font-size: 3.25em;
 		}
@@ -502,7 +492,7 @@ span {
 	.sum-row {
 		display: flex;
 		align-items: flex-start;
-		justify-content: center;
+		justify-content: space-evenly;
 	}
 
 	.sum-info-col {
@@ -673,10 +663,11 @@ footer {
 	position: relative;
 	padding: 24px 0 72px 0;
 	.flexme {
-		width: 250px;
-		@include flexme(center, center);
+		width: 320px;
+		display: flex;
+		align-items: center;
 		img {
-			width: 20%;
+			width: 15%;
 		}
 	}
 
@@ -768,8 +759,7 @@ footer {
 			text-align: left;
 			padding: 0 72px;
 			border-bottom: 1px solid $fontGreen;
-			@include flexme(center, space-between);
-			align-content: stretch;
+			@include flexme(stretch, space-between);
 			position: relative;
 			.tag-col {
 				text-align: center;
@@ -800,7 +790,7 @@ footer {
 				}
 			}
 			.br {
-				padding: 0 24px;
+				padding: 12px 24px;
 				@include flexme(center, space-between);
 				img {
 					width: 64px;
@@ -1105,9 +1095,7 @@ footer {
 			max-width: none;
 		}
 		.rating {
-			position: absolute;
-			right: 0;
-			bottom: 0;
+			float: right;
 		}
 	}
 }
@@ -1208,6 +1196,7 @@ footer {
 	width: 16px !important;
 	height: auto !important;
 	margin: 0 12px;
+	display: inline-block !important;
 }
 
 /*ABOUT*/
@@ -1270,7 +1259,7 @@ footer {
 	.sum-row {
 		display: flex;
 		align-items: flex-start;
-		justify-content: center;
+		justify-content: space-evenly;
 		margin: 64px 0;
 	}
 
@@ -1332,6 +1321,26 @@ footer {
 	.contain {
 		height: 720px;
 		@include flexme(flex-start, center);
+		.btn-prev {
+			display: none;
+			position: absolute;
+			left: 1%; top: 43%;
+			background: url("../images/leftarrW-min.png");
+			background-size: cover;
+			z-index: 100;
+			width: 98px;
+			height: 98px;
+		}
+		.btn-next {
+			display: none;
+			position: absolute;
+			right: 1%; top: 43%;
+			background: url("../images/rightarrW-min.png");
+			background-size: cover;
+			z-index: 100;
+			width: 98px;
+			height: 98px;
+		}
 	}
 	.left-cont {
 		text-align: left;
@@ -1509,10 +1518,12 @@ footer {
 			max-width: 100%;
 		}
 		span {
+			text-align: center;
 			display: block;
 			width: 120px;
 			padding: 4px 12px;
 			text-transform: uppercase;
+			font-weight: bolder;
 			margin: 12px 0;
 			border: 2px solid $fontBlack;
 		}
@@ -1528,9 +1539,10 @@ footer {
 	}
 	form {
 		input {
-			padding: 24px 0;
+			padding: 18px 12px !important;
 			@include inputPreset($fontGreen);
 			margin: 12px 24px;
+			width: 32%;
 		}
 
 		button{
@@ -1593,14 +1605,23 @@ footer {
 			}
 			a{
 				@include thebutton($fontReds);
-				padding: 12px 96px !important;
+				padding: 12px 10vw !important;
 				font-weight: bolder;
 			}
 		}
 	}
-
-	div:first-child div a {
-		float: right;
+	.featured {
+		display: flex;
+		align-content: stretch;
+		justify-content: space-between;
+	}
+	.featured:nth-child(odd){
+		img {
+			order: 2;
+		}
+		.text-cont {
+			order: 1;
+		}
 	}
 }
 
@@ -1626,7 +1647,7 @@ footer {
 	.feat-row {
 		@include flexme(flex-start, space-evenly);
 		max-width: 900px;
-		margin: 0 auto 10vh auto;
+		margin: 10vh auto;
 
 		img {
 			width: 14%;
@@ -1707,6 +1728,15 @@ footer {
 		padding: 24px;
 	}
 
+	.int h2{
+		width: 78%;
+		margin: 0 auto;
+	}
+	.dom h2{
+		width: 78%;
+		margin: 0 auto;
+	}
+
 	.container {
 			background: none;
 			position: relative;
@@ -1738,14 +1768,13 @@ footer {
 			height: 72px;
 		}
 		.suggtext { 
+			width: 100%;
 			padding: 0 12px;
 			h3 {
 				max-width: none;
 			}
 			.rating {
-				position: absolute;
-				right: 12px;
-				bottom: 0;
+				float: right;
 			}
 		}
 	}

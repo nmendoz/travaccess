@@ -87,6 +87,7 @@ p, a {
 
 span {
   font-family: "amono";
+  font-size: 18px;
 }
 
 /*GEN*/
@@ -109,17 +110,10 @@ span {
   text-align: center;
 }
 
-.greengreen {
-  text-align: center;
-  color: #3e695d;
-  background-color: #b3ccc3;
-  padding: 64px 20vw;
-}
-
 .whitegreen {
   text-align: center;
   color: #3e695d;
-  padding: 64px 20vw;
+  padding: 64px 5vw;
 }
 
 .whitered h1, .whitered h2, .whitered h3, .whitered h4, .whitered h5, .whitered h6 {
@@ -128,12 +122,6 @@ span {
 
 .whitered p, .whitered a, .whitered span {
   color: #3e695d;
-}
-
-.yellowgreen {
-  background-color: #dfd0a5;
-  color: #3e695d;
-  padding: 64px 20vw;
 }
 
 .padder {
@@ -347,12 +335,13 @@ span {
 
 /*SLIDER PRESETS*/
 .container {
-  width: 100%;
+  width: 78%;
+  margin: 0 auto;
 }
 
 .container .slider {
   margin: 0 auto;
-  width: 78%;
+  width: 100%;
 }
 
 .slick-track {
@@ -360,12 +349,12 @@ span {
 }
 
 .slick-prev {
-  left: -98px !important;
+  left: -98px;
   background: url("../images/leftarr-min.png") !important;
   background-size: cover !important;
   z-index: 100;
-  width: 98px !important;
-  height: 98px !important;
+  width: 98px;
+  height: 98px;
 }
 
 .slick-prev::before {
@@ -373,12 +362,12 @@ span {
 }
 
 .slick-next {
-  right: -98px !important;
+  right: -98px;
   background: url("../images/rightarr-min.png") !important;
   background-size: cover !important;
   z-index: 100;
-  width: 98px !important;
-  height: 98px !important;
+  width: 98px;
+  height: 98px;
 }
 
 .slick-next::before {
@@ -418,6 +407,7 @@ span {
   display: block;
   overflow: hidden;
   position: relative;
+  width: 100% !important;
 }
 
 .stories .btn-prev {
@@ -502,7 +492,7 @@ span {
 
 .stories .active-slide {
   padding: 4% 8%;
-  width: 50% !important;
+  width: 50%;
 }
 
 .stories .active-slide h2 {
@@ -587,9 +577,9 @@ span {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #summary .sum-info-col {
@@ -804,20 +794,17 @@ footer {
 }
 
 footer .flexme {
-  width: 250px;
+  width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 footer .flexme img {
-  width: 20%;
+  width: 15%;
 }
 
 footer div div:first-child {
@@ -930,14 +917,12 @@ footer .below {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
   position: relative;
 }
 
@@ -979,7 +964,7 @@ footer .below {
 }
 
 .expe-head .headliner .abo-tag .br {
-  padding: 0 24px;
+  padding: 12px 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1395,9 +1380,7 @@ footer .below {
 }
 
 #suggestions .suggtext .rating {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  float: right;
 }
 
 #inquire {
@@ -1516,6 +1499,7 @@ footer .below {
   width: 16px !important;
   height: auto !important;
   margin: 0 12px;
+  display: inline-block !important;
 }
 
 /*ABOUT*/
@@ -1606,9 +1590,9 @@ footer .below {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 64px 0;
 }
 
@@ -1688,6 +1672,30 @@ footer .below {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.arts-page .contain .btn-prev {
+  display: none;
+  position: absolute;
+  left: 1%;
+  top: 43%;
+  background: url("../images/leftarrW-min.png");
+  background-size: cover;
+  z-index: 100;
+  width: 98px;
+  height: 98px;
+}
+
+.arts-page .contain .btn-next {
+  display: none;
+  position: absolute;
+  right: 1%;
+  top: 43%;
+  background: url("../images/rightarrW-min.png");
+  background-size: cover;
+  z-index: 100;
+  width: 98px;
+  height: 98px;
 }
 
 .arts-page .left-cont {
@@ -1924,10 +1932,12 @@ footer .below {
 }
 
 .recommend .col span {
+  text-align: center;
   display: block;
   width: 120px;
   padding: 4px 12px;
   text-transform: uppercase;
+  font-weight: bolder;
   margin: 12px 0;
   border: 2px solid #393738;
 }
@@ -1941,13 +1951,14 @@ footer .below {
 }
 
 .sm-news form input {
-  padding: 24px 0;
+  padding: 18px 12px !important;
   text-align: center;
   color: #3e695d;
   background-color: transparent;
   padding: 12px 48px;
   border: 1px solid #3e695d;
   margin: 12px 24px;
+  width: 32%;
 }
 
 .sm-news form input::-webkit-input-placeholder {
@@ -2058,12 +2069,31 @@ footer .below {
   padding: 12px 48px;
   border: 1px solid #c24728;
   color: #c24728;
-  padding: 12px 96px !important;
+  padding: 12px 10vw !important;
   font-weight: bolder;
 }
 
-.feat-revs div:first-child div a {
-  float: right;
+.feat-revs .featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feat-revs .featured:nth-child(odd) img {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.feat-revs .featured:nth-child(odd) .text-cont {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .expe-revs .contain {
@@ -2107,7 +2137,7 @@ footer .below {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   max-width: 900px;
-  margin: 0 auto 10vh auto;
+  margin: 10vh auto;
 }
 
 .expe-revs .feat-row img {
@@ -2189,6 +2219,16 @@ footer .below {
   padding: 24px;
 }
 
+.rec-tours .int h2, .acc-exp .int h2 {
+  width: 78%;
+  margin: 0 auto;
+}
+
+.rec-tours .dom h2, .acc-exp .dom h2 {
+  width: 78%;
+  margin: 0 auto;
+}
+
 .rec-tours .container, .acc-exp .container {
   background: none;
   position: relative;
@@ -2235,6 +2275,7 @@ footer .below {
 }
 
 .rec-tours .container .suggtext, .acc-exp .container .suggtext {
+  width: 100%;
   padding: 0 12px;
 }
 
@@ -2243,8 +2284,6 @@ footer .below {
 }
 
 .rec-tours .container .suggtext .rating, .acc-exp .container .suggtext .rating {
-  position: absolute;
-  right: 12px;
-  bottom: 0;
+  float: right;
 }
 /*# sourceMappingURL=styles.css.map */
