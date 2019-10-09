@@ -254,7 +254,10 @@ span {
 			display: inline-block;
 			color: #333 !important;
 			padding: 24px 0;
-			border-bottom: 1px solid #aaaaaa;
+			border-bottom: 1px solid #bbbbbb;
+		}
+		ul li:last-child a {
+			border: none;
 		}
 	}
 }
@@ -336,25 +339,25 @@ span {
 }
 .slick-prev {
 	left: -98px;
+	width: 98px !important;
+	height: 98px !important;
 	&::before{
 		content: "" !important;
 	}
 	background: url("../images/leftarr-min.png") !important;
 	background-size: cover !important;
 	z-index: 100;
-	width: 98px;
-	height: 98px;
 }
 .slick-next{
 	right: -98px;
+	width: 98px !important;
+	height: 98px !important;
 	&::before{
 		content: "" !important;
 	}
 	background: url("../images/rightarr-min.png") !important;
 	background-size: cover !important;
 	z-index: 100;
-	width: 98px;
-	height: 98px;
 }
 .trip-guides .center {
 	.clip {
@@ -472,6 +475,9 @@ span {
 		border: 2px solid white;
 		padding: 10px 48px;
 		text-align: center;
+		&::placeholder {
+			content: "TYPE HERE" !important;
+		}
 	}
 	nav {
 		float : right;
@@ -1136,12 +1142,14 @@ footer {
 		}
 
 		select {
+			font-weight: bold;
 			font-size: 0.75em;
 			background: transparent;
 			border: 1px solid $fontGreen;
 			color: $fontGreen;
 			padding: 8px 20px;
 			option {
+				font-weight: bold;
 				background: $panGreen;
 				color: $fontGreen;
 				border-color : $fontGreen;

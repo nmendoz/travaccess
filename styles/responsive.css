@@ -223,13 +223,13 @@
     }
     .slick-prev {
         left: -75px;
-        width: 72px;
-        height: 72px;
+        width: 72px !important;
+        height: 72px !important;
     }
     .slick-next {
         right: -75px;
-        width: 72px;
-        height: 72px;
+        width: 72px !important;
+        height: 72px !important;
     }
     .btn-prev {
         width: 72px !important;
@@ -508,19 +508,29 @@
 }
 
 @media only screen and (max-width: 480px)  {
+    /*FONTS*/
+    h1 {
+        font-size: 1.75em !important;
+    }
+    h2 {
+        font-size: 1.25em !important;
+    }
+    p {
+        font-size: 16px !important;
+    }
     /*FIXNAV*/
     .fixnav .top {padding: 12px 24px;}
     .fixnav .top img {width: 98px;}
     .fixnav .top .burger-drop {width: 32px; height: 32px;}
     /*SLIDER*/
     .slick-prev {
-        width: 64px;
-        height: 64px;
+        width: 64px !important;
+        height: 64px !important;
         left: -45px;
     }
     .slick-next {
-        width: 64px;
-        height: 64px;
+        width: 64px !important;
+        height: 64px !important;
         right: -45px;
     }
     .btn-prev {

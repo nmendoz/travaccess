@@ -246,7 +246,11 @@ span {
   display: inline-block;
   color: #333 !important;
   padding: 24px 0;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.fixnav .drop ul li:last-child a {
+  border: none;
 }
 
 .whitenav {
@@ -376,11 +380,11 @@ span {
 
 .slick-prev {
   left: -98px;
+  width: 98px !important;
+  height: 98px !important;
   background: url("../images/leftarr-min.png") !important;
   background-size: cover !important;
   z-index: 100;
-  width: 98px;
-  height: 98px;
 }
 
 .slick-prev::before {
@@ -389,11 +393,11 @@ span {
 
 .slick-next {
   right: -98px;
+  width: 98px !important;
+  height: 98px !important;
   background: url("../images/rightarr-min.png") !important;
   background-size: cover !important;
   z-index: 100;
-  width: 98px;
-  height: 98px;
 }
 
 .slick-next::before {
@@ -551,6 +555,22 @@ span {
   border: 2px solid white;
   padding: 10px 48px;
   text-align: center;
+}
+
+.headme input::-webkit-input-placeholder {
+  content: "TYPE HERE" !important;
+}
+
+.headme input:-ms-input-placeholder {
+  content: "TYPE HERE" !important;
+}
+
+.headme input::-ms-input-placeholder {
+  content: "TYPE HERE" !important;
+}
+
+.headme input::placeholder {
+  content: "TYPE HERE" !important;
 }
 
 .headme nav {
@@ -1440,6 +1460,7 @@ footer .below {
 }
 
 #inquire .iwlte select {
+  font-weight: bold;
   font-size: 0.75em;
   background: transparent;
   border: 1px solid #3e695d;
@@ -1448,6 +1469,7 @@ footer .below {
 }
 
 #inquire .iwlte select option {
+  font-weight: bold;
   background: #b3ccc3;
   color: #3e695d;
   border-color: #3e695d;
