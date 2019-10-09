@@ -244,9 +244,7 @@
         display: none;
     }
     .fixnav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: block;
     }
     header {
         padding-top: 95.1px !important;
@@ -510,6 +508,11 @@
 }
 
 @media only screen and (max-width: 480px)  {
+    /*FIXNAV*/
+    .fixnav .top {padding: 12px 24px;}
+    .fixnav .top img {width: 98px;}
+    .fixnav .top .burger-drop {width: 32px; height: 32px;}
+    /*SLIDER*/
     .slick-prev {
         width: 64px;
         height: 64px;

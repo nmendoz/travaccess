@@ -235,9 +235,21 @@ $(".stories .btn-prev").click (function() {
     }
 });
 
-/*DROPDOWN*/
-var dropState = false;
+/*FIXED NAV */
+var queuedState = false;
+var navState = 0;
 $(".burger-drop").click(function () {
-    dropState = !dropState;
-    //PUT DROP CONDITIONS HERE
+    if (queuedState === false) {
+        if (navState == 0) {
+            queuedState = true;
+            $('.drop').slideDown(400, function(){queuedState = false});
+            navState = 1;
+        }
+        else if (navState == 1) {
+            queuedState = true;
+            $('.drop').slideUp(400, function(){queuedState = false});
+            navState = 0;
+        }
+
+    }
 });

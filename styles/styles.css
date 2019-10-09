@@ -199,18 +199,33 @@ span {
 }
 
 .fixnav {
+  height: 100vh;
   display: none;
-  background-color: white;
-  padding: 12px 48px;
   position: fixed;
   z-index: 200;
 }
 
-.fixnav img {
+.fixnav .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  padding: 12px 48px;
+}
+
+.fixnav .top img {
+  float: left;
   width: 140px;
 }
 
-.fixnav .burger-drop {
+.fixnav .top .burger-drop {
+  float: right;
   width: 64px;
   height: 64px;
   background: url("../images/dropwdown.png");
@@ -218,8 +233,21 @@ span {
 }
 
 .fixnav .drop {
-  position: absolute;
+  background: #f3f3f3;
+  width: 100%;
   display: none;
+}
+
+.fixnav .drop ul li {
+  list-style-type: none;
+}
+
+.fixnav .drop ul li a {
+  width: 100%;
+  display: inline-block;
+  color: #333 !important;
+  padding: 24px 0;
+  border-bottom: 1px solid #aaaaaa;
 }
 
 .whitenav {

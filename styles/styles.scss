@@ -222,23 +222,41 @@ span {
 }
 //FIXED NAV MOBILE
 .fixnav {
+	height: 100vh;
 	display: none;
-	background-color: white;
-	padding: 12px 48px;
 	position: fixed;
 	z-index: 200;
-	img {
-		width: 140px;
-	}
+	.top {
+		@include flexme(center, space-between);
+		background-color: white;
+		padding: 12px 48px;
+		img {
+			float: left;
+			width: 140px;
+		}
+	
+		.burger-drop {
+			float: right;
+			width: 64px; height: 64px;
+			background: url("../images/dropwdown.png");
+			background-size: cover;
+		}
 
-	.burger-drop {
-		width: 64px; height: 64px;
-		background: url("../images/dropwdown.png");
-		background-size: cover;
 	}
 	.drop {
-		position: absolute;
+		background: #f3f3f3;
+		width: 100%;
 		display: none;
+		ul li{
+			list-style-type: none; 
+		}
+		ul li a{
+			width: 100%;
+			display: inline-block;
+			color: #333 !important;
+			padding: 24px 0;
+			border-bottom: 1px solid #aaaaaa;
+		}
 	}
 }
 
