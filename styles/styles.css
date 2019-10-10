@@ -529,20 +529,7 @@ span {
   font-size: 3.25em;
 }
 
-/*INDEX*/
-.headme {
-  background: url("../images/homepagebg.png");
-  background-size: cover;
-  height: 85vh;
-  display: block;
-  color: white;
-}
-
-.headme h1 {
-  margin-top: 10%;
-}
-
-.headme .hdr-text {
+.hdr-text {
   height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -556,8 +543,21 @@ span {
           justify-content: center;
 }
 
-.headme .hdr-text h1 {
+.hdr-text h1 {
   margin-top: 0;
+}
+
+/*INDEX*/
+.headme {
+  background: url("../images/homepagebg.png");
+  background-size: cover;
+  height: 85vh;
+  display: block;
+  color: white;
+}
+
+.headme h1 {
+  margin-top: 10%;
 }
 
 .headme img {
@@ -1744,7 +1744,7 @@ footer .below {
 
 /*ARTICLES*/
 .arts-page .contain {
-  height: 720px;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1787,6 +1787,23 @@ footer .below {
   color: white;
   height: 100%;
   width: 100%;
+}
+
+.arts-page .left-cont .trend-cont {
+  height: 100%;
+}
+
+.arts-page .left-cont .pop-cont {
+  height: 100%;
+}
+
+.arts-page .left-cont span {
+  text-align: center;
+  margin-top: 10%;
+  padding: 8px;
+  border: 1px solid white;
+  width: 120px;
+  text-transform: uppercase;
 }
 
 .arts-page .right-cont {
@@ -1866,8 +1883,8 @@ footer .below {
 }
 
 .arts-page .hdr-cont {
-  padding-top: 24%;
   max-width: 65%;
+  height: 100%;
   margin: 0 auto;
   display: none;
 }

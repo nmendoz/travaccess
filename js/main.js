@@ -127,16 +127,16 @@ $(document).ready(function(){
         for (var i = 0; i < popTab.length; i++){
             popTab[i].index = i;
             popTab[i].addEventListener("click", function(e){
-                for (var x = 0; x < popTab.length; x++) {
-                    if($(popTab[x]).hasClass("active")) {
-                        $(popTab[x]).removeClass("active");
-                    }
-                    if($(hdrPopCont[x]).hasClass("active-cont")) {
-                        $(hdrPopCont[x]).removeClass("active-cont");
-                        $(hdrPopCont[x]).hide();
-                    }
-                }
                 if (!$(this).hasClass("active")){
+                    for (var x = 0; x < popTab.length; x++) {
+                        if($(popTab[x]).hasClass("active")) {
+                            $(popTab[x]).removeClass("active");
+                        }
+                        if($(hdrPopCont[x]).hasClass("active-cont")) {
+                            $(hdrPopCont[x]).removeClass("active-cont");
+                            $(hdrPopCont[x]).hide();
+                        }
+                    }
                     $(this).addClass("active");
                 }
                 if (!$(hdrPopCont[e.target.closest("li").index]).hasClass("active-cont")){
