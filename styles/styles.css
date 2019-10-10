@@ -533,7 +533,6 @@ span {
 .headme {
   background: url("../images/homepagebg.png");
   background-size: cover;
-  padding: 0 2.5vw 35.5vh 2.5vw;
   height: 85vh;
   display: block;
   color: white;
@@ -541,6 +540,24 @@ span {
 
 .headme h1 {
   margin-top: 10%;
+}
+
+.headme .hdr-text {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headme .hdr-text h1 {
+  margin-top: 0;
 }
 
 .headme img {
@@ -1432,6 +1449,7 @@ footer .below {
 }
 
 #suggestions .suggtext {
+  width: 100%;
   padding: 0 12px;
 }
 
@@ -1568,7 +1586,6 @@ footer .below {
 .abt-hdr {
   background: url("../images/homepagebg.png");
   background-size: cover;
-  padding: 0 2.5vw 35.5vh 2.5vw;
   height: 85vh;
   display: block;
   color: white;
@@ -1584,6 +1601,9 @@ footer .below {
 }
 
 .abt-hdr .text-cont {
+  position: absolute;
+  left: 0;
+  bottom: 30%;
   text-align: left;
   padding: 0 8vw;
 }
@@ -2059,7 +2079,6 @@ footer .below {
 .rev-hdr {
   background: url("../images/homepagebg.png");
   background-size: cover;
-  padding: 0 2.5vw 35.5vh 2.5vw;
   height: 85vh;
   display: block;
   color: white;

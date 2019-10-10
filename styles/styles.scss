@@ -31,7 +31,7 @@
 @mixin fullHead($bg) {
 	background : url($bg);
 	background-size : cover;
-	padding: 0 2.5vw 35.5vh 2.5vw;
+	//padding: 0 2.5vw 35.5vh 2.5vw;
 	height: 85vh;
 	display : block;
 	color : white;
@@ -464,6 +464,15 @@ span {
 /*INDEX*/
 .headme {
 	@include fullHead('../images/homepagebg.png');
+    .hdr-text {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hdr-text h1 {
+        margin-top: 0;
+    }
 	img {
 		float: left;
 		width: 140px;
@@ -1117,6 +1126,7 @@ footer {
 		height: 72px;
 	}
 	.suggtext { 
+		width: 100%;
 		padding: 0 12px;
 		h3 {
 			max-width: none;
@@ -1237,6 +1247,9 @@ footer {
 	}
 
 	.text-cont {
+		position: absolute;
+		left: 0;
+		bottom: 30%;
 		text-align: left;
 		padding: 0 8vw;
 		h1 {
